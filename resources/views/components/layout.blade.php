@@ -29,8 +29,9 @@
         }
     </script>
 </head>
-<body class="bg-white">
+<body class="bg-white flex flex-col min-h-screen">
     @include('components.navbar')
-    {{ $slot }}
+    <main class="flex-1">{{ $slot }}</main>
+    @include('components.footer')
 </body>
 </html>
