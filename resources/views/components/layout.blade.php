@@ -20,7 +20,7 @@
     <body class="bg-gray-50 min-h-screen font-[Poppins]">
         {{-- TODO: Add header component --}}
 
-    <main class="max-2xl:block px-4 py-6 font-[Poppins]">
+        <main class="max-2xl:block px-4 py-6 font-[Poppins]">
             {{ $slot }}
         </main>
 
