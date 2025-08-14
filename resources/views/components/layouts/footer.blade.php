@@ -1,5 +1,5 @@
 <footer class="bg-dark-teal text-white py-6" aria-label="RADMedics site footer">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 min-h-20">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-stretch gap-8 min-h-20">
         <!-- Left Column: Logo + Name + Tagline -->
         <div class="flex flex-col items-center mt-4">
             <img src="/images/radmedics-logo.png" alt="RADMEDICS Logo" class="w-24 h-24 mb-2">
@@ -12,7 +12,7 @@
         </div>
 
         <!-- Middle Column: Copyright -->
-        <div class="flex flex-col flex-1 h-full justify-center items-center">
+        <div class="flex flex-col flex-1 justify-center items-center">
             <span class="text-sm text-white/90">
                 RADMedics Corporation © 2025. All rights reserved.
             </span>
