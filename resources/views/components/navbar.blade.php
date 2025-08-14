@@ -1,20 +1,18 @@
 <nav class="bg-white shadow-lg fixed w-full z-20 font-sans">
     <div class="max-w-7xl mx-auto px-2 flex items-center justify-between h-32">
         <!-- Logo + Company Name + Tagline -->
-        <div class="flex items-center space-x-6 -mx-20">
+        <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-6 lg:justify-start lg:w-auto">
             <!-- Logo -->
             <img src="/images/radmedics-logo.png"
                 alt="RADMedics Logo"
                 class="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full shadow"/>
             <!-- Company Name (stacked) -->
-            <div class="flex flex-col leading-none items-center lg:items-start">
-                <span class="text-lg sm:text-xl lg:text-2xl font-bold text-cyan tracking-wide -mb-1 shadow-xs"
-                    style="letter-spacing:0.18em;">RADMEDICS</span>
+            <div class="flex flex-col leading-none items-start">
+                <span class="text-lg sm:text-xl lg:text-2xl font-bold text-cyan tracking-wide -mb-1" style="letter-spacing:0.18em;">RADMEDICS</span>
                 <span class="text-lg sm:text-xl lg:text-2xl font-bold text-cyan -mt-1">CORPORATION</span>
             </div>
             <!-- Tagline Pill -->
-            <div class="bg-dark-teal rounded-xl px-2 py-1 sm:px-3 sm:py-2 text-white italic text-xs sm:text-xs lg:text-xs font-sans w-fit text-center shadow
-                        hidden sm:block">
+            <div class="bg-dark-teal rounded-xl px-2 py-1 sm:px-3 sm:py-2 text-white italic text-xs sm:text-xs lg:text-xs font-sans w-fit text-center shadow hidden sm:block">
                 Response Advocates for Development of Medics
             </div>
         </div>
