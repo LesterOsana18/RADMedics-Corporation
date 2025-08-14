@@ -30,8 +30,8 @@
     </script>
 </head>
 <body class="bg-white flex flex-col min-h-screen">
-    @include('components.navbar')
+    @include('components.layouts.navbar')
     <main class="flex-1">{{ $slot }}</main>
-    @include('components.footer')
+    @include('components.layouts.footer')
 </body>
 </html>
