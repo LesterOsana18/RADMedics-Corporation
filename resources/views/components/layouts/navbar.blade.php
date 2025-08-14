@@ -1,0 +1,109 @@
+<nav id="site-nav" class="bg-white fixed w-full z-20 font-sans">
+    <!-- Logo + Company Name + Tagline -->
+    <div class="max-w-7xl mx-auto px-2 flex items-center justify-between h-24">
+       <!-- Logo -->
+        <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-5 lg:justify-start lg:w-auto">
+        <a href="{{ url('/') }}" class="flex items-center space-x-2 group focus:outline-none rounded-md">
+                <img src="/images/radmedics-logo.png"
+                    alt="RADMedics Logo"
+                    class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full shadow"/>
+                <div class="flex flex-col leading-none items-start">
+            <span class="text-base sm:text-lg lg:text-xl font-bold text-cyan tracking-wide -mb-0.5 group-hover:text-dark-teal group-hover:scale-105 transition-all duration-200 origin-left inline-block" style="letter-spacing:0.18em;">RADMEDICS</span>
+            <span class="text-base sm:text-lg lg:text-xl font-bold text-cyan -mt-0.5 group-hover:text-dark-teal group-hover:scale-105 transition-all duration-200 origin-left inline-block">CORPORATION</span>
+                </div>
+            </a>
+            <!-- Tagline Pill -->
+            <div class="bg-dark-teal rounded-lg px-2 py-1 sm:px-2.5 sm:py-1.5 text-white italic text-[10px] sm:text-xs lg:text-[11px] font-sans w-fit text-center shadow hidden sm:block">
+                Response Advocates for Development of Medics
+            </div>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-6 -mx-20">
+            @php($navItems = [
+                ['route' => 'about', 'label' => 'ABOUT US'],
+                ['route' => 'courses', 'label' => 'COURSES'],
+                ['route' => 'updates', 'label' => 'UPDATES'],
+                ['route' => 'contact', 'label' => 'CONTACT'],
+            ])
+            @foreach($navItems as $item)
+                @php($exists = \Illuminate\Support\Facades\Route::has($item['route']))
+                @php($isActive = request()->routeIs($item['route']))
+                @php($url = $exists ? route($item['route']) : '#')
+                <a href="{{ $url }}" class="px-1 font-semibold text-base relative group flex items-center nav-link">
+                    <span class="{{ $isActive ? 'text-dark-teal' : 'text-cyan' }} transition-all duration-200 group-hover:text-dark-teal group-hover:scale-105">
+                        {{ $item['label'] }}
+                    </span>
+                    <span class="absolute left-0 -bottom-1 h-[2px] bg-dark-teal transition-all duration-300 origin-left {{ $isActive ? 'w-full scale-x-100' : 'w-0 scale-x-0 group-hover:w-full group-hover:scale-x-100' }}"></span>
+                </a>
+            @endforeach
+            <a href="{{ route('login') }}" class="bg-dark-teal rounded-lg px-5 py-2 font-semibold text-base text-white flex items-center transform transition-all duration-200 hover:bg-cyan hover:scale-105">
+                LOGIN
+            </a>
+        </div>
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" class="lg:hidden focus:outline-none">
+            <span class="sr-only">Toggle menu</span>
+            <svg id="icon-open" class="w-8 h-8 text-dark-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" class="w-8 h-8 text-dark-teal hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-dark-teal bg-opacity-95 transform -translate-x-full
+                transition-transform duration-300 ease-in-out lg:hidden z-50">
+        <button id="menu-close" aria-label="Close menu"
+            class="absolute top-4 right-4 focus:outline-none">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="mt-20 px-6 space-y-6">
+            @php($mobileNavItems = [
+                ['route' => 'about', 'label' => 'ABOUT US'],
+                ['route' => 'courses', 'label' => 'COURSES'],
+                ['route' => 'updates', 'label' => 'UPDATES'],
+                ['route' => 'contact', 'label' => 'CONTACT'],
+                ['route' => 'login', 'label' => 'LOGIN'],
+            ])
+            @foreach($mobileNavItems as $item)
+                @php($exists = \Illuminate\Support\Facades\Route::has($item['route']))
+                @php($isActive = request()->routeIs($item['route']))
+                @php($url = $exists ? route($item['route']) : '#')
+                <a href="{{ $url }}" class="block font-bold text-lg {{ $isActive ? 'text-cyan' : 'text-white' }} transition-colors duration-200 hover:text-cyan">
+                    {{ $item['label'] }}
+                </a>
+            @endforeach
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('icon-open');
+            const closeIcon = document.getElementById('icon-close');
+            const closeBtn = document.getElementById('menu-close');
+            function setNavOffset(){
+                const nav = document.getElementById('site-nav');
+                if(!nav) return;
+                document.documentElement.style.setProperty('--nav-height', nav.offsetHeight + 'px');
+            }
+            function toggleMenu() {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', !expanded);
+                menu.classList.toggle('translate-x-0');
+                openIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            }
+            toggle.addEventListener('click', toggleMenu);
+            closeBtn.addEventListener('click', toggleMenu);
+            window.addEventListener('resize', setNavOffset);
+            setNavOffset();
+        });
+    </script>
+</nav>

@@ -30,7 +30,9 @@
     </script>
 </head>
 <body class="bg-white">
-    @include('components.navbar')
-    {{ $slot }}
+    @include('components.layouts.navbar')
+    <main style="padding-top: var(--nav-height, 6rem);">
+        {{ $slot }}
+    </main>
 </body>
 </html>

@@ -9,6 +9,12 @@ Route::get('/', function () {
     return view('landing-page');
 })->name('home');
 
+// Public informational pages
+Route::view('/about', 'pages.about')->name('about');
+Route::view('/courses', 'pages.courses')->name('courses');
+Route::view('/updates', 'pages.updates')->name('updates');
+Route::view('/contact', 'pages.contact')->name('contact');
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
