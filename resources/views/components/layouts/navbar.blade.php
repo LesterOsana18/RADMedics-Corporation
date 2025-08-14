@@ -1,19 +1,20 @@
-<nav id="site-nav" class="bg-white fixed w-full z-20 font-sans">
-    <!-- Logo + Company Name + Tagline -->
-    <div class="max-w-7xl mx-auto px-2 flex items-center justify-between h-24">
-        <!-- Logo -->
-        <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-5 lg:justify-start lg:w-auto">
-        <a href="{{ url('/') }}" class="flex items-center space-x-2 group focus:outline-none rounded-md">
+<nav id="site-nav" class="bg-white shadow-lg fixed w-full z-20 font-sans">
+    <div class="max-w-7xl mx-auto flex items-center justify-between h-24">
+        <!-- Logo + Company Name + Tagline -->
+        <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-6 lg:justify-start lg:w-auto">
+            <!-- Logo -->
+            <a href="{{ url('/') }}" class="group flex items-center justify-center w-full space-x-2 lg:space-x-6 lg:justify-start lg:w-auto">
                 <img src="/images/radmedics-logo.png"
                     alt="RADMedics Logo"
                     class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full shadow"/>
+                <!-- Company Name (stacked) -->
                 <div class="flex flex-col leading-none items-start">
-            <span class="text-base sm:text-lg lg:text-xl font-bold text-cyan tracking-wide -mb-0.5 group-hover:text-dark-teal group-hover:scale-105 transition-all duration-200 origin-left inline-block" style="letter-spacing:0.18em;">RADMEDICS</span>
-            <span class="text-base sm:text-lg lg:text-xl font-bold text-cyan -mt-0.5 group-hover:text-dark-teal group-hover:scale-105 transition-all duration-200 origin-left inline-block">CORPORATION</span>
+                    <span class="text-base sm:text-lg lg:text-xl font-bold text-cyan tracking-wide -mb-1 group-hover:text-dark-teal group-hover:scale-105 transition-all duration-200 origin-center inline-block" style="letter-spacing:0.18em;">RADMEDICS</span>
+                    <span class="text-base sm:text-lg lg:text-xl font-bold text-cyan -mt-1 group-hover:text-dark-teal group-hover:scale-105 transition-all duration-200 origin-center inline-block">CORPORATION</span>
                 </div>
             </a>
             <!-- Tagline Pill -->
-            <div class="bg-dark-teal rounded-lg px-2 py-1 sm:px-2.5 sm:py-1.5 text-white italic text-[10px] sm:text-xs lg:text-[11px] font-sans w-fit text-center shadow hidden sm:block">
+            <div class="bg-dark-teal rounded-xl px-2 py-1 sm:px-3 sm:py-2 text-white italic text-xs sm:text-xs lg:text-xs font-sans w-fit text-center shadow hidden sm:block">
                 Response Advocates for Development of Medics
             </div>
         </div>
@@ -36,7 +37,7 @@
                     <span class="absolute left-0 -bottom-1 h-[2px] bg-dark-teal transition-all duration-300 origin-left {{ $isActive ? 'w-full scale-x-100' : 'w-0 scale-x-0 group-hover:w-full group-hover:scale-x-100' }}"></span>
                 </a>
             @endforeach
-            <a href="{{ route('login') }}" class="bg-dark-teal rounded-lg px-5 py-2 font-semibold text-base text-white flex items-center transform transition-all duration-200 hover:bg-cyan hover:scale-105">
+            <a href="{{ route('login') }}" class="bg-dark-teal rounded-lg px-6 py-2 font-semibold text-base text-white flex items-center transform transition-all duration-200 hover:bg-cyan hover:scale-105">
                 LOGIN
             </a>
         </div>

@@ -1,19 +1,19 @@
-<footer class="bg-dark-teal text-white py-6">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8">
+<footer class="bg-dark-teal text-white py-6" aria-label="RADMedics site footer">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 h-60">
         <!-- Left Column: Logo + Name + Tagline -->
-        <div class="flex flex-col items-center -mx-4 mt-4">
-            <img src="/images/radmedics-logo.png" alt="RADMEDICS Logo" class="w-24 h-24 mb-4">
+        <div class="flex flex-col items-center mt-4">
+            <img src="/images/radmedics-logo.png" alt="RADMEDICS Logo" class="w-24 h-24 mb-2">
             <div class="text-center">
                 <h2 class="font-bold text-2xl leading-tight">RADMEDICS <br> CORPORATION</h2>
-                <div class="bg-cyan mt-2 rounded-xl px-2 py-1 sm:px-3 sm:py-2 text-white italic text-xs sm:text-xs lg:text-xs font-sans w-fit text-center shadow hidden sm:block">
+                <div class="bg-cyan mt-2 rounded-xl px-2 py-1 sm:px-3 sm:py-2 text-white italic text-xs font-sans w-fit text-center shadow hidden sm:block">
                     Response Advocates for Development of Medics
                 </div>
             </div>
         </div>
 
         <!-- Middle Column: Copyright -->
-        <div class="flex flex-col items-center justify-center flex-1">
-            <span class="text-sm text-white/90 mt-56 lg:mb-0">
+        <div class="flex flex-col flex-1 h-full justify-center items-center">
+            <span class="text-sm text-white/90">
                 RADMedics Corporation © 2025. All rights reserved.
             </span>
         </div>
