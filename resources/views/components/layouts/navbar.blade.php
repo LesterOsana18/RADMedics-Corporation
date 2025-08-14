@@ -1,7 +1,7 @@
 <nav id="site-nav" class="bg-white fixed w-full z-20 font-sans">
     <!-- Logo + Company Name + Tagline -->
     <div class="max-w-7xl mx-auto px-2 flex items-center justify-between h-24">
-       <!-- Logo -->
+        <!-- Logo -->
         <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-5 lg:justify-start lg:w-auto">
         <a href="{{ url('/') }}" class="flex items-center space-x-2 group focus:outline-none rounded-md">
                 <img src="/images/radmedics-logo.png"
