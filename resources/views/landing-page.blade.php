@@ -1,5 +1,4 @@
 <x-layout>
-
-{{-- Insert Landing Page Code here --}}
-
+    <!-- Landing page intentionally left blank to show header/navbar only -->
+    <!-- Currently working on the footer component -->
 </x-layout>
