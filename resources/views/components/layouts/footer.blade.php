@@ -1,8 +1,8 @@
-<footer class="bg-dark-teal text-white py-6" aria-label="RADMedics site footer">
+<footer class="bg-dark-teal text-white pt-6 pb-0" aria-label="RADMedics site footer">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-stretch gap-8 min-h-20">
         <!-- Left Column: Logo + Name + Tagline -->
         <div class="flex flex-col items-center mt-4">
-            <img src="/images/radmedics-logo.png" alt="RADMEDICS Logo" class="w-24 h-24 mb-2">
+            <img src="/images/radmedics-logo.png" alt="RADMEDICS Logo" class="w-28 h-28 mb-2">
             <div class="text-center">
                 <h2 class="font-bold text-2xl leading-tight">RADMEDICS <br> CORPORATION</h2>
                 <div class="bg-cyan mt-2 rounded-xl px-2 py-1 sm:px-3 sm:py-2 text-white italic text-xs font-sans w-fit text-center shadow sm:block">
@@ -11,17 +11,22 @@
             </div>
         </div>
 
-        <!-- Middle Column: Copyright -->
-        <div class="flex flex-col flex-1 justify-center items-center">
-            <span class="text-sm text-white/90">
-                RADMedics Corporation © 2025. All rights reserved.
-            </span>
+        <!-- Middle Column: Quick Links -->
+        <div class="flex flex-col items-center mr-20 lg:items-start w-full lg:w-auto">
+            <span class="font-bold text-base mb-4 block text-center lg:text-left">Learn More</span>
+            <div class="flex flex-col gap-4 text-base w-full lg:w-auto">
+                <a href="/courses" class="hover:underline text-white transition text-center lg:text-left">Available Courses</a>
+                <a href="/enroll" class="hover:underline text-white transition text-center lg:text-left">Get EMS Training</a>
+                <a href="/faqs" class="hover:underline text-white transition text-center lg:text-left">FAQs</a>
+                <a href="/privacy-policy" class="hover:underline text-white transition text-center lg:text-left">Privacy and Policy</a>
+                <a href="/terms-of-service" class="hover:underline text-white transition text-center lg:text-left">Terms of Service</a>
+            </div>
         </div>
 
         <!-- Right Column: Socials + Contact -->
         <div class="flex flex-col items-center lg:items-end gap-6">
             <div>
-                <span class="font-bold text-base mb-3 block">Follow Us</span>
+                <span class="font-bold text-base mb-2 block">Follow Us</span>
                 <div class="flex gap-4 text-3xl">
                     <!-- Social Media Icons -->
                     <span><img src="/images/icons/facebook-logo-white.png" alt="Facebook" class="w-12 h-12"></span>
@@ -31,7 +36,7 @@
                 </div>
             </div>
             <div class="lg:mr-3">
-                <span class="font-bold text-base mb-3 block">Find Us</span>
+                <span class="font-bold text-base mb-2 block">Find Us</span>
                 <div class="flex items-center gap-3 mt-1">
                     <!-- Email Icon -->
                     <span><img src="/images/icons/email-white.png" alt="Email Address" class="w-12 h-12"></span>
@@ -45,4 +50,11 @@
             </div>
         </div>
     </div>
+
+        <!-- Bottom copyright section -->
+        <div class="w-full bg-[#044C4B] mt-8 py-4">
+            <div class="max-w-7xl mx-auto px-4 text-center text-xs text-white tracking-wide">
+                RADMedics Corporation &copy; 2025. All rights reserved.
+            </div>
+        </div>
 </footer>
