@@ -31,7 +31,8 @@
 </head>
 <body class="bg-white flex flex-col min-h-screen">
     @include('components.layouts.navbar')
-    <main class="flex-1">{{ $slot }}</main>
+    <!-- Temporary spacer to push footer down and display content -->
+    <main class="flex-1 min-h-[800px] py-12">{{ $slot }}</main>
     @include('components.layouts.footer')
 </body>
 </html>
