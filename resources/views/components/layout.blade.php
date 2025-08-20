@@ -28,6 +28,8 @@
             }
         }
     </script>
+    {{-- Alpine is being used on the image-slider component --}}
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body class="bg-white flex flex-col min-h-screen">
     @include('components.layouts.navbar')
