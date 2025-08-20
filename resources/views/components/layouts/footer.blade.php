@@ -28,11 +28,22 @@
             <div>
                 <span class="font-bold text-base mb-2 block">Follow Us</span>
                 <div class="flex gap-4 text-3xl">
-                    <!-- Social Media Icons -->
-                    <span><img src="/images/icons/facebook-logo-white.png" alt="Facebook" class="w-12 h-12"></span>
-                    <span><img src="/images/icons/instagram-logo-white.png" alt="Instagram" class="w-12 h-12"></span>
-                    <span><img src="/images/icons/tiktok-logo-white.png" alt="Tiktok" class="w-12 h-12"></span>
-                    <span><img src="/images/icons/youtube-logo-white.png" alt="YouTube" class="w-12 h-12"></span>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/radmedicsph" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/icons/facebook-logo-white.png" alt="Facebook" class="w-12 h-12 transition duration-200 hover:scale-110"/>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/radmedicsph?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/icons/instagram-logo-white.png" alt="Instagram" class="w-12 h-12 transition duration-200 hover:scale-110"/>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@radmedicsph?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/icons/tiktok-logo-white.png" alt="Tiktok" class="w-12 h-12 transition duration-200 hover:scale-110"/>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://youtube.com/@radmedicsph?si=zRYBfqE0bTvdzDj2" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/icons/youtube-logo-white.png" alt="YouTube" class="w-12 h-12 transition duration-200 hover:scale-110"/>
+                    </a>
                 </div>
             </div>
             <div class="lg:mr-3">
