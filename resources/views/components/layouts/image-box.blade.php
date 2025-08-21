@@ -58,9 +58,9 @@
     @if($variant === 'ver-1') {{-- Two Center Photobox --}}
 
         @foreach($images ?? [] as $image)
-            <div class="relative w-full md:w-1/2 max-w-lg aspect-video">
+            <div class="relative w-full md:w-1/2 max-w-lg aspect-video" style="margin-bottom: 30px">
                 {{-- Background Box --}}
-                <div class="absolute top-0 left-0 {{ $boxSizeClass }}" style="background-color: #0ABAB5;"></div>
+                <div class="absolute top-0 right-0 {{ $boxSizeClass }}" style="background-color: #0ABAB5;"></div>
 
                 {{-- Foreground Box with Image --}}
                 <div class="absolute bottom-0 right-0 {{ $boxSizeClass }} flex items-center justify-center text-gray-500 text-sm" style="background-color: #FFF; border: 0.36px solid #056360;">
@@ -90,7 +90,7 @@
                 'ver-4' => 'absolute bottom-0 right-0',
             ][$variant] ?? '';
         @endphp
-        <div class="{{ $containerClasses }}">
+        <div class="{{ $containerClasses }}" style="margin-bottom: 30px">
             {{-- Background Box --}}
             <div class="{{ $bgBoxClasses }} {{ $boxSizeClass }}" style="background-color: #0ABAB5;"></div>
 
