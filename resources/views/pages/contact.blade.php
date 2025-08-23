@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="max-w-3xl mx-auto pt-24">
+    <div class="max-w-3xl mx-auto pt-32 pb-8 md:pt-32 md:pb-8">
         <div class="rounded-[32px] shadow-lg overflow-hidden bg-white">
             <!-- Card Header -->
             <div class="bg-cyan px-8 py-6">
