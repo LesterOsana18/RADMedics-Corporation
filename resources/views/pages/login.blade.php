@@ -23,12 +23,18 @@
                 </p>
                 <!-- Buttons -->
                 <div class="w-full flex flex-col space-y-4 mb-6 max-w-xs">
-                    <a href=""
-                        class="w-full py-2 rounded-sm bg-blue-600 hover:bg-blue-700 text-white font-regular text-md text-center transition shadow">Student</a>
-                    <a href=""
-                        class="w-full py-2 rounded-sm bg-green-600 hover:bg-green-700 text-white font-regular text-md text-center transition shadow">Instructor</a>
-                    <a href=""
-                        class="w-full py-2 rounded-sm bg-red-600 hover:bg-red-700 text-white font-regular text-md text-center transition shadow">Admin</a>
+                    <a href="{{ route('under-construction') }}"
+                        class="w-full py-2 rounded-sm bg-blue-600 hover:bg-blue-700 text-white font-regular text-md text-center transition shadow">
+                            Student
+                    </a>
+                    <a href="{{ route('under-construction') }}"
+                        class="w-full py-2 rounded-sm bg-green-600 hover:bg-green-700 text-white font-regular text-md text-center transition shadow">
+                            Instructor
+                    </a>
+                    <a href="{{ route('under-construction') }}"
+                        class="w-full py-2 rounded-sm bg-red-600 hover:bg-red-700 text-white font-regular text-md text-center transition shadow">
+                            Admin
+                    </a>
                 </div>
                 <!-- Terms and Privacy -->
                 <p class="text-sm font-extralight text-white text-center leading-relaxed mb-2 px-2">
