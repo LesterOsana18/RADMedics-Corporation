@@ -18,6 +18,9 @@ Route::view('/contact', 'pages.contact')->name('contact');
 // Temporary route for login page
 Route::view('/login', 'pages.login')->name('login');
 
+// "Student", "Instructor", and "Admin" login buttons route here while feature is under construction
+Route::view('/under-construction', 'pages.under-construction')->name('under-construction');
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
