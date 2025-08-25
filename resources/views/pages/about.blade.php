@@ -37,13 +37,13 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </x-layouts.text-box>
     </div>
-    <div class="flex items-center" style="padding-bottom: 15%;">
+    <div class="flex items-center" style="padding-bottom: 15%; margin-right: 5%;">
         <div class="w-1/2 pr-8">
             <x-layouts.image-box variant="ver-2" :image="$portraitImage"/>
         </div>
         <div class="w-1/2">
             <div class="mb-4">
-                <span class="page-title">
+                <span class="page-title" style="text-align: right; padding-bottom: 5%;">
                     WHAT WE DO
                 </span>
             </div>
@@ -54,10 +54,10 @@
             </div>
         </div>
     </div>
-    <div class="flex items-center" style="padding-bottom: 15%;">
+    <div class="flex items-center" style="padding-bottom: 10%; margin-left: 5%">
         <div class="w-1/2 pr-8">
             <div class="mb-4">
-                <span class="page-title">
+                <span class="page-title" style="text-align: left; padding-bottom: 5%;">
                     OUR MISSION
                 </span>
             </div>
@@ -71,13 +71,13 @@
             <x-layouts.image-box variant="ver-3" :image="$portraitImage"/>
         </div>
     </div>
-    <div class="flex items-center" style="padding-bottom: 15%;">
+    <div class="flex items-center" style="padding-bottom: 10%; margin-right: 5%;">
         <div class="w-1/2 pr-8">
             <x-layouts.image-box variant="ver-4" :image="$portraitImage"/>
         </div>
         <div class="w-1/2">
             <div class="mb-4">
-                <span class="page-title">
+                <span class="page-title" style="text-align: right; padding-bottom: 5%;">
                     OUR VISION
                 </span>
             </div>
@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    <div style="padding-bottom: 15%;">
+    <div style="padding-bottom: 10%;">
         <span class="page-title">
             OUR CORE VALUES
         </span>
@@ -127,20 +127,13 @@
         </div>
     </div>
 
-    <div style="padding-bottom: 15%;">
+    <div style="padding-bottom: 5%;">
         <span class="page-title">
             MEET THE TEAM
         </span>
         <div>
             <div class="flex mt-8 max-w-7xl mx-auto gap-8">
-            <div class="w-1/2">
                 <x-layouts.image-slider/>
-            </div>
-            <div class="w-1/2">
-                <x-layouts.text-box variant="ver-6">
-
-                </x-layouts.text-box>
-            </div>
             </div>
         </div>
     </div>
