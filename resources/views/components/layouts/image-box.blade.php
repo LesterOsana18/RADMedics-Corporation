@@ -5,8 +5,8 @@
         'ver-3' => 'flex items-center justify-center w-full flex-row-reverse',
         'ver-4' => 'flex items-center justify-center w-full',
     ];
-
     $boxSizeClass = 'w-[97%] h-[97%]';
+    $centerBoxSizeClass = 'w-[117%] h-[97%]';
 @endphp
 {{-- VARIANTS ARE DIRECTLY FROM THE FIGMA DESIGNS IN DRAFT #2 --}}
 
@@ -58,12 +58,12 @@
     @if($variant === 'ver-1') {{-- Two Center Photobox --}}
 
         @foreach($images ?? [] as $image)
-            <div class="relative w-full md:w-1/2 max-w-lg aspect-video" style="margin-bottom: 30px">
+            <div class="relative w-full md:w-1/2 max-w-lg aspect-video" style="margin-bottom: 30px; margin-left: 5%; padding-right: 5%;">
                 {{-- Background Box --}}
-                <div class="absolute top-0 right-0 {{ $boxSizeClass }}" style="background-color: #0ABAB5;"></div>
+                <div class="absolute top-0 right-0 {{ $centerBoxSizeClass }}" style="background-color: #0ABAB5;"></div>
 
                 {{-- Foreground Box with Image --}}
-                <div class="absolute bottom-0 right-0 {{ $boxSizeClass }} flex items-center justify-center text-gray-500 text-sm" style="background-color: #FFF; border: 0.36px solid #056360;">
+                <div class="absolute bottom-0 right-0 {{ $centerBoxSizeClass }} flex items-center justify-center text-gray-500 text-sm" style="background-color: #FFF; border: 0.36px solid #056360;">
                     <img src="{{ $image['src'] ?? '' }}"
                          alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
                          class="w-full h-full object-cover">

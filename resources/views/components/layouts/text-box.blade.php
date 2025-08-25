@@ -6,7 +6,6 @@
         'ver-3' => 'flex items-center justify-center w-full flex-row-reverse',
         'ver-4' => 'flex items-center justify-center w-full',
         'ver-5' => 'flex items-center justify-center w-full',
-        'ver-6' => 'flex items-center justify-center w-full',
     ];
 
     // The size of the foreground/background boxes relative to their container.
@@ -33,7 +32,7 @@
 
 <div class="{{ $variantClasses[$variant] ?? $variantClasses['ver-1'] }}">
     @if ($variant === 'ver-1')
-        <div class="relative w-full max-w-5xl aspect-[1245/264] p-2" style="align-items: centermargin-bottom: 30px">
+        <div class="relative w-full max-w-5xl aspect-[1645/464] p-2" style="align-items: centermargin-bottom: 30px">
             {{-- Background Box --}}
             <div class="absolute bottom-3 {{ $boxSizeClass }} rounded-[60px] border-[4px]" style="border-color: #0ABAB5;"></div>
 
@@ -63,31 +62,19 @@
             </div>
         </div>
     </div>
-@elseif ($variant === 'ver-6')
-    <div class="relative w-full max-w-3xl aspect-video p-2" style="margin-bottom: 30px">
-        {{-- Foreground Box with Text --}}
-        <div class="absolute top-3 flex items-center justify-center rounded-2xl border-[4px] p-6 md:p-8" style="border-color: #0ABAB5; width: 838.125px; height: 439.688px;">
-            <div class="font-poppins text-center font-light text-2xl leading-8" style="color: #056360;">
-            {{ $slot }}
-            </div>
-        </div>
-    </div>
 @else
     {{-- Variants 2-3: Now styled with two borders and a transparent background. --}}
     @php
-        // Defines the shape and size of the container for each variant.
         $containerClasses = [
-            'ver-2' => 'relative w-[942px] h-[259px]', // Custom fixed size
-            'ver-3' => 'relative w-[942px] h-[259px]',      // Custom fixed size
+            'ver-2' => 'relative w-[1042px] h-[259px]',
+            'ver-3' => 'relative w-[1042px] h-[259px]',
         ][$variant];
 
-        // Defines the position of the background box.
         $bgBoxClasses = [
             'ver-2' => 'absolute top-0 right-0',
             'ver-3' => 'absolute top-0 left-0',
         ][$variant];
 
-        // Defines the position of the foreground box.
         $fgBoxClasses = [
             'ver-2' => 'absolute bottom-0 left-0',
             'ver-3' => 'absolute bottom-0 right-0',
