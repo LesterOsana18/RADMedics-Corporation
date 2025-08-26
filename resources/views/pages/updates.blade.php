@@ -10,7 +10,7 @@
 				subtitle="Facebook Page"
 				logo="/images/radmedics-logo.png"
 				facebook-page-url="https://www.facebook.com/radmedicsph"
-				height="500" {{-- adjust if too tall/short --}}
+				height="500"
 				class="mx-auto"
 			/>
 
