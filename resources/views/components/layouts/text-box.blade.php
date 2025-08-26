@@ -2,20 +2,17 @@
     // Defines the alignment for the entire component container.
     $variantClasses = [
         'ver-1' => 'flex justify-center items-center w-full',
-        'ver-2' => 'flex items-center justify-center w-full flex-row-reverse',
-        'ver-3' => 'flex items-center justify-center w-full flex-row-reverse',
+        'ver-2' => 'flex items-center justify-center w-full',
+        'ver-3' => 'flex items-center justify-center w-full',
         'ver-4' => 'flex items-center justify-center w-full',
         'ver-5' => 'flex items-center justify-center w-full',
     ];
-
-    // The size of the foreground/background boxes relative to their container.
-    // This creates the offset effect.
     $boxSizeClass = 'w-[97%] h-[97%]';
 @endphp
 
 {{--
     This component creates a stylized text box with a background and foreground element.
-    It supports 6 different variants.
+    It supports 5 different variants.
 
     HOW TO USE:
     Pass the content directly into the component's slot.
@@ -30,78 +27,51 @@
     $variant = $variant ?? 'ver-1';
 @endphp
 
-<div class="{{ $variantClasses[$variant] ?? $variantClasses['ver-1'] }}">
+<div class="{{ $variantClasses[$variant] ?? $variantClasses['ver-1'] }} px-4 py-8">
     @if ($variant === 'ver-1')
-        <div class="relative w-full max-w-5xl aspect-[1645/464] p-2" style="align-items: centermargin-bottom: 30px">
-            {{-- Background Box --}}
-            <div class="absolute bottom-3 {{ $boxSizeClass }} rounded-[60px] border-[4px]" style="border-color: #0ABAB5;"></div>
-
-            {{-- Foreground Box with Text --}}
-            <div class="absolute top-3 {{ $boxSizeClass }} flex items-center justify-center rounded-[60px] border-[4px] p-6 md:p-10" style="border-color: #056360;">
-                <div class="font-poppins text-center font-light text-2xl leading-8"
-                    style="color: #056360; text-align: center; font-family: Poppins; font-size: 24px; font-style: normal; font-weight: 300; line-height: 32px;">
+        <div class="relative w-full max-w-5xl p-2 min-h-[200px] lg:h-[260px] flex items-center justify-center">
+            <div class="absolute inset-x-0 bottom-2 h-full rounded-3xl lg:rounded-[60px] border-4" style="border-color: #0ABAB5;"></div>
+            <div class="absolute inset-x-0 top-2 h-full flex items-center justify-center rounded-3xl lg:rounded-[60px] border-4 p-6 md:p-10" style="border-color: #056360;">
+                <div class="font-poppins text-center font-light text-xl md:text-2xl leading-8" style="color: #056360;">
                     {{ $slot }}
                 </div>
             </div>
         </div>
-@elseif ($variant === 'ver-4')
-    <div class="relative w-full max-w-3xl aspect-video p-2" style="margin-bottom: 30px">
-        {{-- Foreground Box with Text --}}
-        <div class="absolute top-3 flex items-center justify-center rounded-[60px]" style="background-color: #0ABAB5; width: 345px; height: 305px;">
-            <div class="font-poppins text-center font-light text-2xl leading-8" style="color: #FFF; text-align: center; font-family: Poppins; font-size: 24px; font-style: normal; font-weight: 300; line-height: 32px;">
-                {{ $slot }}
-            </div>
-        </div>
-    </div>
-@elseif ($variant === 'ver-5')
-    <div class="relative w-full max-w-3xl aspect-video p-2" style="margin-bottom: 30px">
-        {{-- Foreground Box with Text --}}
-        <div class="absolute top-3 flex items-center justify-center rounded-[60px] border-[4px] p-6 md:p-8" style="border-color: #0ABAB5; background-color: #FFF; width: 345px; height: 305px;">
-            <div class="font-poppins text-center font-light text-2xl leading-8" style="color: #056360; text-align: center; font-family: Poppins; font-size: 24px; font-style: normal; font-weight: 300; line-height: 32px;">
-                {{ $slot }}
-            </div>
-        </div>
-    </div>
-@else
-    {{-- Variants 2-3: Now styled with two borders and a transparent background. --}}
-    @php
-        $containerClasses = [
-            'ver-2' => 'relative w-[1042px] h-[259px]',
-            'ver-3' => 'relative w-[1042px] h-[259px]',
-        ][$variant];
-
-        $bgBoxClasses = [
-            'ver-2' => 'absolute top-0 right-0',
-            'ver-3' => 'absolute top-0 left-0',
-        ][$variant];
-
-        $fgBoxClasses = [
-            'ver-2' => 'absolute bottom-0 left-0',
-            'ver-3' => 'absolute bottom-0 right-0',
-        ][$variant];
-
-        $bgBoxStyle = '';
-        $fgBoxStyle = 'border-color: #056360;';
-        $bgBoxRadius = 'rounded-2xl';
-        $fgBoxRadius = 'rounded-2xl';
-
-        if ($variant === 'ver-2') {
-            $bgBoxStyle = 'border-color: #0ABAB5;';
-        } elseif ($variant === 'ver-3') {
-            $bgBoxStyle = 'border-color: #0ABAB5;';
-        }
+    @elseif ($variant === 'ver-4' || $variant === 'ver-5')
+        @php
+            $boxStyle = $variant === 'ver-4'
+                ? 'background-color: #0ABAB5;'
+                : 'border-color: #0ABAB5; background-color: #FFF;';
+            $textStyle = $variant === 'ver-4'
+                ? 'color: #FFF;'
+                : 'color: #056360;';
         @endphp
+        <div class="relative w-full max-w-sm lg:w-[345px] lg:h-[305px]">
+            <div class="flex items-center justify-center rounded-3xl lg:rounded-[60px] p-8 md:p-10 min-h-[250px] w-full h-full @if($variant === 'ver-5') border-4 @endif" style="{{ $boxStyle }}">
+                <div class="font-poppins text-center font-light text-xl md:text-2xl leading-8" style="{{ $textStyle }}">
+                    {{ $slot }}
+                </div>
+            </div>
+        </div>
+    @else
+        @php
+            $fgBoxClasses = [
+                'ver-2' => 'absolute top-2 right-2 w-full h-full',
+                'ver-3' => 'absolute top-2 left-2 w-full h-full',
+            ][$variant];
 
-        <div class="{{ $containerClasses }}" style="margin-bottom: 30px">
-            {{-- Background Box (Now a border) --}}
-            <div class="{{ $bgBoxClasses }} {{ $boxSizeClass }} {{ $bgBoxRadius }} rounded-[60px] border-[4px] p-6 md:p-8" style="{{ $bgBoxStyle }}"></div>
-
-            {{-- Foreground Box with Text (Thicker border) --}}
-            <div class="{{ $fgBoxClasses }} {{ $boxSizeClass }} flex items-center justify-center {{ $fgBoxRadius }} rounded-[60px] border-[4px] p-6 md:p-8" style="{{ $fgBoxStyle }}">
-                <div class="font-poppins text-center font-light text-2xl leading-8" style="color: #056360;">
-                {{ $slot }}
+            $bgBoxClasses = [
+                'ver-2' => 'absolute bottom-2 left-2 w-full h-full',
+                'ver-3' => 'absolute bottom-2 right-2 w-full h-full',
+            ][$variant];
+        @endphp
+        <div class="relative w-full max-w-4xl lg:w-[1042px] lg:h-[259px]">
+            <div class="{{ $bgBoxClasses }} rounded-3xl lg:rounded-[60px] border-4" style="border-color: #0ABAB5;"></div>
+            <div class="{{ $fgBoxClasses }} flex items-center justify-center rounded-3xl lg:rounded-[60px] border-4 p-6 md:p-8" style="border-color: #056360;">
+                <div class="font-poppins text-center font-light text-xl md:text-2xl leading-8" style="color: #056360;">
+                    {{ $slot }}
                 </div>
             </div>
         </div>
     @endif
-    </div>
+</div>
