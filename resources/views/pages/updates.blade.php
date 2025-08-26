@@ -28,5 +28,18 @@
 		</div>
 
 		<script async src="https://www.instagram.com/embed.js"></script>
+
+        {{-- Animation for Cards --}}
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+				const cards = document.querySelectorAll('.js-soc-card');
+				cards.forEach((el, idx) => {
+					setTimeout(() => {
+						el.classList.remove('opacity-0','translate-y-4');
+						el.classList.add('opacity-100','translate-y-0');
+					}, 100 + idx * 120);
+				});
+			});
+		</script>
 	</section>
 </x-layout>

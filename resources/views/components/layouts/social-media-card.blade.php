@@ -72,7 +72,7 @@
 	$buttonHref = $isFacebook ? $facebookTarget : ($isInstagram ? $instagramTarget : '#');
 @endphp
 
-<div class="flex flex-col items-center text-center space-y-4 w-full {{ $class }}">
+<div class="flex flex-col items-center text-center space-y-4 w-full opacity-0 translate-y-4 animate-[none] motion-safe:transition-all motion-safe:duration-700 motion-safe:ease-out will-change-transform will-change-opacity js-soc-card {{ $class }}">
 	<div class="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center bg-white shadow">
 		<img src="{{ $logo }}" alt="{{ $title }} Logo" class="w-full h-full object-contain" />
 	</div>
