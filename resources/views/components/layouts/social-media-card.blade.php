@@ -72,7 +72,7 @@
 	$buttonHref = $isFacebook ? $facebookTarget : ($isInstagram ? $instagramTarget : '#');
 @endphp
 
-<div class="flex flex-col items-center text-center space-y-4 {{ $class }}">
+<div class="flex flex-col items-center text-center space-y-4 w-full {{ $class }}">
 	<div class="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center bg-white shadow">
 		<img src="{{ $logo }}" alt="{{ $title }} Logo" class="w-full h-full object-contain" />
 	</div>
@@ -86,21 +86,21 @@
 		<div class="border-2 border-[#0ABAB5] rounded-xl bg-white shadow-md p-4 flex flex-col items-stretch gap-4 overflow-visible">
 		@if($isFacebook)
 			@php $pluginWidth = min($width,500); @endphp
-			<div class="mx-auto" style="width:{{ $pluginWidth }}px;">
-				<iframe src="{{ $facebookEmbedSrc }}" width="{{ $pluginWidth }}" height="{{ $height }}" style="border:none;overflow:hidden;display:block;width:{{ $pluginWidth }}px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Facebook {{ $facebookIsGroup ? 'Group' : 'Page' }} Embed"></iframe>
+			<div class="mx-auto w-full" style="max-width:{{ $pluginWidth }}px;">
+				<iframe src="{{ $facebookEmbedSrc }}" width="{{ $pluginWidth }}" height="{{ $height }}" style="border:none;overflow:hidden;display:block;width:100%;max-width:{{ $pluginWidth }}px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" title="Facebook {{ $facebookIsGroup ? 'Group' : 'Page' }} Embed"></iframe>
 			</div>
 		@elseif($isInstagram)
 			@if($instagramPost && $showInstagramPost)
 				@php $igWidth = min($width, 500); @endphp
-				<div class="mx-auto" style="width:{{ $igWidth }}px;">
+				<div class="mx-auto w-full" style="max-width:{{ $igWidth }}px;">
 					<div class="relative" style="height:{{ $height }}px; overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch;">
-						<blockquote class="instagram-media" data-instgrm-permalink="{{ rtrim($instagramPost,'/') }}/" data-instgrm-version="14" style="background:#fff; border:0; margin:0 auto; max-width:100%; width:{{ $igWidth }}px;">
+						<blockquote class="instagram-media" data-instgrm-permalink="{{ rtrim($instagramPost,'/') }}/" data-instgrm-version="14" style="background:#fff; border:0; margin:0 auto; width:100%; max-width:{{ $igWidth }}px;">
 						</blockquote>
 					</div>
 				</div>
 			@elseif($instagramProfileIframe)
 				@php $igWidth = min($width, 500); @endphp
-				<div class="mx-auto" style="width:{{ $igWidth }}px;">
+				<div class="mx-auto w-full" style="max-width:{{ $igWidth }}px;">
 					<div class="relative" style="height:{{ $height }}px; overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch;">
 						<iframe
 							src="{{ rtrim($instagramTarget,'/') }}/"
@@ -110,7 +110,7 @@
 							frameborder="0"
 							scrolling="no"
 							allowfullscreen
-							style="border:0; background:#fff; display:block; width:{{ $igWidth }}px;"
+							style="border:0; background:#fff; display:block; width:100%; max-width:{{ $igWidth }}px;"
 						></iframe>
 					</div>
 					@if($instagramIncludeProfileScript)
