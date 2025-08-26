@@ -1,5 +1,5 @@
 <x-layout>
-	<section class="max-w-7xl mx-auto px-4 py-12">
+	<section class="max-w-7xl mx-auto px-4 py-12 pt-24">
 
 		<div class="grid gap-16 md:grid-cols-2 pt-8">
 
