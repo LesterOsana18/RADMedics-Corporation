@@ -2,10 +2,10 @@
     // Define the team member data, including a description for the text box.
     $members = [
         [
-            'image' => 'https://placehold.co/800x1000/e0f2fe/0891b2?text=J.Doe',
-            'name' => 'John Doe',
-            'title' => 'Operational Manager',
-            'description' => 'John ensures that all operations run smoothly and efficiently, optimizing processes for maximum productivity and team cohesion.'
+            'image' => '/images/Doc-Almar.jpg',
+            'name' => 'ALMAR NUÑEZ',
+            'title' => 'President & Medical Director',
+            'description' => 'Description'
         ],
         [
             'image' => 'https://placehold.co/800x1000/dcfce7/16a34a?text=J.Smith',
