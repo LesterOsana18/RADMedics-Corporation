@@ -39,7 +39,7 @@
                 <!-- Terms and Privacy -->
                 <p class="text-sm font-extralight text-white text-center leading-relaxed mb-2 px-2">
                     By using this service, you acknowledge that you have read, understood, and agree to the RADMedics Website
-                    <a href="" class="underline text-blue-500 hover:text-cyan"><br>Terms of Use</a>
+                    <a href="" class="underline text-blue-500 hover:text-cyan"><br>Terms of Service</a>
                     and
                     <a href="" class="underline text-blue-500 hover:text-cyan">Privacy Policy</a>.
                 </p>
