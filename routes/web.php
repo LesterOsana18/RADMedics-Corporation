@@ -15,6 +15,9 @@ Route::view('/about', 'pages.about')->name('about');
 Route::view('/courses', 'pages.courses')->name('courses');
 Route::view('/updates', 'pages.updates')->name('updates');
 Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/faqs', 'pages.faqs')->name('faqs');
+Route::view('/privacy-policy', 'pages.privacy-policy')->name('privacy-policy');
+Route::view('/terms-of-service', 'pages.terms-of-service')->name('terms-of-service');
 
 // Temporary route for login page
 Route::view('/login', 'pages.login')->name('login');

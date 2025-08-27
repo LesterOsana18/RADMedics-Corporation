@@ -16,7 +16,7 @@
             <span class="font-bold text-base mb-4 block text-center lg:text-left">Learn More</span>
             <div class="flex flex-col gap-4 text-base w-full lg:w-auto">
                 <a href="/courses" class="hover:underline text-white transition text-center lg:text-left">Available Courses</a>
-                <a href="/enroll" class="hover:underline text-white transition text-center lg:text-left">Get EMS Training</a>
+                <a href="/contact" class="hover:underline text-white transition text-center lg:text-left">Get Trained</a>
                 <a href="/faqs" class="hover:underline text-white transition text-center lg:text-left">FAQs</a>
                 <a href="/privacy-policy" class="hover:underline text-white transition text-center lg:text-left">Privacy and Policy</a>
                 <a href="/terms-of-service" class="hover:underline text-white transition text-center lg:text-left">Terms of Service</a>
