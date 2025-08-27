@@ -78,7 +78,7 @@
                         <div class="space-y-6">
                             <div class="flex items-center gap-3">
                                 <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">01</span>
-                                <h2 class="text-2xl font-bold">1. Introduction</h2>
+                                <h2 class="text-2xl font-bold">Introduction</h2>
                             </div>
                             <div class="space-y-5 leading-relaxed text-black/80">
                                 <p>Welcome to <strong>RADMedics Corporation</strong> (“Company”, “we”, “our”, “us”).</p>
@@ -95,7 +95,7 @@
                         <div class="space-y-6">
                             <div class="flex items-center gap-3">
                                 <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">02</span>
-                                <h2 class="text-2xl font-bold">2. Communications</h2>
+                                <h2 class="text-2xl font-bold">Communications</h2>
                             </div>
                             <p class="leading-relaxed text-black/80">By using Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. You may opt out via unsubscribe links or by emailing <strong>info@radmedicsph.com</strong>.</p>
                         </div>
@@ -106,7 +106,7 @@
                         <div class="space-y-6">
                             <div class="flex items-center gap-3">
                                 <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">03</span>
-                                <h2 class="text-2xl font-bold">3. Purchases</h2>
+                                <h2 class="text-2xl font-bold">Purchases</h2>
                             </div>
                             <div class="space-y-5 leading-relaxed text-black/80">
                                 <p>If you purchase products or services, you may need to provide payment details (card number, expiration, billing, shipping).</p>
@@ -122,7 +122,7 @@
                         <div class="space-y-6">
                             <div class="flex items-center gap-3">
                                 <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">04</span>
-                                <h2 class="text-2xl font-bold">4. Contests, Sweepstakes & Promotions</h2>
+                                <h2 class="text-2xl font-bold">Contests, Sweepstakes & Promotions</h2>
                             </div>
                             <p class="leading-relaxed text-black/80">Promotions may be governed by separate rules. If Promotion rules conflict with these Terms, Promotion rules control.</p>
                         </div>
@@ -132,7 +132,7 @@
                     <section id="refunds" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">05</span>
-                            <h2 class="text-2xl font-bold">5. Refunds</h2>
+                            <h2 class="text-2xl font-bold">Refunds</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">Refunds for Contracts may be issued within <strong>30 days</strong> of original purchase.</p>
                     </section>
@@ -141,7 +141,7 @@
                     <section id="content" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">06</span>
-                            <h2 class="text-2xl font-bold">6. Content</h2>
+                            <h2 class="text-2xl font-bold">Content</h2>
                         </div>
                         <div class="space-y-5 leading-relaxed text-black/80">
                             <p>You are responsible for Content you post, including legality and appropriateness. You warrant you own or have rights to it and its posting does not infringe others’ rights.</p>
@@ -155,7 +155,7 @@
                     <section id="prohibited-uses" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">07</span>
-                            <h2 class="text-2xl font-bold">7. Prohibited Uses</h2>
+                            <h2 class="text-2xl font-bold">Prohibited Uses</h2>
                         </div>
                         <div class="space-y-5 leading-relaxed text-black/80">
                             <p>You agree not to use Service for unlawful purposes, to exploit minors, send spam, impersonate others, infringe rights, engage in harmful conduct, or restrict others’ use.</p>
@@ -178,7 +178,7 @@
                     <section id="analytics" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">08</span>
-                            <h2 class="text-2xl font-bold">8. Analytics</h2>
+                            <h2 class="text-2xl font-bold">Analytics</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">We may use third-party providers to monitor and analyze Service usage.</p>
                     </section>
@@ -187,7 +187,7 @@
                     <section id="minors" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">09</span>
-                            <h2 class="text-2xl font-bold">9. No Use By Minors</h2>
+                            <h2 class="text-2xl font-bold">No Use By Minors</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">Service is for individuals 18+. By using Service you represent you are 18 or older with authority to agree.</p>
                     </section>
@@ -196,7 +196,7 @@
                     <section id="accounts" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">10</span>
-                            <h2 class="text-2xl font-bold">10. Accounts</h2>
+                            <h2 class="text-2xl font-bold">Accounts</h2>
                         </div>
                         <div class="space-y-5 leading-relaxed text-black/80">
                             <p>You must provide accurate, current information. You are responsible for confidentiality and all activity under your credentials.</p>
@@ -209,7 +209,7 @@
                     <section id="ip" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">11</span>
-                            <h2 class="text-2xl font-bold">11. Intellectual Property</h2>
+                            <h2 class="text-2xl font-bold">Intellectual Property</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">Service and original content (excluding user Content) remain exclusive property of RADMedics Corporation and licensors. Protected by applicable laws. Trademarks may not be used without written consent.</p>
                     </section>
@@ -218,7 +218,7 @@
                     <section id="copyright-policy" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">12</span>
-                            <h2 class="text-2xl font-bold">12. Copyright Policy</h2>
+                            <h2 class="text-2xl font-bold">Copyright Policy</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">We respond to claims that Content infringes copyrights or other IP rights. Misrepresentation may incur liability.</p>
                     </section>
@@ -227,7 +227,7 @@
                     <section id="dmca" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">13</span>
-                            <h2 class="text-2xl font-bold">13. DMCA Notice</h2>
+                            <h2 class="text-2xl font-bold">DMCA Notice</h2>
                         </div>
                         <div class="space-y-5 leading-relaxed text-black/80">
                             <p>Provide the following (17 U.S.C. 512(c)(3)) to submit a DMCA claim:</p>
@@ -247,7 +247,7 @@
                     <section id="feedback" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">14</span>
-                            <h2 class="text-2xl font-bold">14. Error Reporting & Feedback</h2>
+                            <h2 class="text-2xl font-bold">Error Reporting & Feedback</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">By submitting Feedback (ideas, suggestions, errors) you grant us an irrevocable, perpetual, transferable, royalty-free license to use it.</p>
                     </section>
@@ -256,7 +256,7 @@
                     <section id="links" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">15</span>
-                            <h2 class="text-2xl font-bold">15. Links To Other Websites</h2>
+                            <h2 class="text-2xl font-bold">Links To Other Websites</h2>
                         </div>
                         <div class="space-y-5 leading-relaxed text-black/80">
                             <p>Third-party links may appear. We do not control their content, policies, or practices.</p>
@@ -269,7 +269,7 @@
                     <section id="disclaimer" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">16</span>
-                            <h2 class="text-2xl font-bold">16. Disclaimer of Warranty</h2>
+                            <h2 class="text-2xl font-bold">Disclaimer of Warranty</h2>
                         </div>
                         <p class="leading-relaxed text-black/80 uppercase text-[0.9rem] tracking-wide">
                             SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND. WE DISCLAIM ALL WARRANTIES INCLUDING MERCHANTABILITY, NON-INFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE. SOME JURISDICTIONS MAY LIMIT EXCLUSIONS.
@@ -280,7 +280,7 @@
                     <section id="liability" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">17</span>
-                            <h2 class="text-2xl font-bold">17. Limitation of Liability</h2>
+                            <h2 class="text-2xl font-bold">Limitation of Liability</h2>
                         </div>
                         <p class="leading-relaxed text-black/80 uppercase text-[0.9rem] tracking-wide">
                             TO THE MAXIMUM EXTENT PERMITTED, WE ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES. LIABILITY (IF ANY) IS LIMITED TO AMOUNTS PAID FOR SERVICES. SOME STATES DO NOT ALLOW LIMITATIONS.
@@ -291,7 +291,7 @@
                     <section id="termination" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">18</span>
-                            <h2 class="text-2xl font-bold">18. Termination</h2>
+                            <h2 class="text-2xl font-bold">Termination</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">We may suspend or terminate accounts immediately for any reason including breach. Provisions intended to survive termination do so.</p>
                     </section>
@@ -300,7 +300,7 @@
                     <section id="law" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">19</span>
-                            <h2 class="text-2xl font-bold">19. Governing Law</h2>
+                            <h2 class="text-2xl font-bold">Governing Law</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">These Terms are governed by the laws of the Philippines. Failure to enforce a provision is not a waiver. Invalid provisions are limited or removed; remainder remains effective.</p>
                     </section>
@@ -309,7 +309,7 @@
                     <section id="changes-service" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">20</span>
-                            <h2 class="text-2xl font-bold">20. Changes To Service</h2>
+                            <h2 class="text-2xl font-bold">Changes To Service</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">We may withdraw or amend Service without notice. Access may be restricted periodically.</p>
                     </section>
@@ -318,7 +318,7 @@
                     <section id="amendments" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">21</span>
-                            <h2 class="text-2xl font-bold">21. Amendments To Terms</h2>
+                            <h2 class="text-2xl font-bold">Amendments To Terms</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">We may amend Terms by posting updates. Continued use after revisions constitutes acceptance.</p>
                     </section>
@@ -327,7 +327,7 @@
                     <section id="waiver" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">22</span>
-                            <h2 class="text-2xl font-bold">22. Waiver & Severability</h2>
+                            <h2 class="text-2xl font-bold">Waiver & Severability</h2>
                         </div>
                         <p class="leading-relaxed text-black/80">No waiver is continuing unless stated. Invalid provisions are limited so remainder continues.</p>
                     </section>
@@ -336,7 +336,7 @@
                     <section id="acknowledgement" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">23</span>
-                            <h2 class="text-2xl font-bold">23. Acknowledgement</h2>
+                            <h2 class="text-2xl font-bold">Acknowledgement</h2>
                         </div>
                         <p class="leading-relaxed text-black/80 uppercase text-[0.9rem] tracking-wide">BY USING SERVICE YOU ACKNOWLEDGE YOU HAVE READ AND AGREE TO THESE TERMS.</p>
                     </section>
@@ -345,7 +345,7 @@
                     <section id="contact" class="scroll-mt-32">
                         <div class="flex items-center gap-3 mb-8">
                             <span class="h-9 w-9 flex items-center justify-center rounded-xl bg-[#056360]/10 text-[#056360] font-bold text-sm">24</span>
-                            <h2 class="text-2xl font-bold">24. Contact Us</h2>
+                            <h2 class="text-2xl font-bold">Contact Us</h2>
                         </div>
                         <div class="space-y-5 leading-relaxed text-black/80">
                             <p>Send feedback, comments, or support requests to <strong>info@radmedicsph.com</strong>.</p>
