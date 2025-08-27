@@ -21,6 +21,7 @@
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center space-x-6 -mx-20">
             @php($navItems = [
+                ['route' => 'landing-page', 'label' => 'HOME'],
                 ['route' => 'about', 'label' => 'ABOUT US'],
                 ['route' => 'courses', 'label' => 'COURSES'],
                 ['route' => 'updates', 'label' => 'UPDATES'],
@@ -66,6 +67,7 @@
         </button>
         <div class="mt-20 px-6 space-y-6">
             @php($mobileNavItems = [
+                ['route' => 'landing-page', 'label' => 'HOME'],
                 ['route' => 'about', 'label' => 'ABOUT US'],
                 ['route' => 'courses', 'label' => 'COURSES'],
                 ['route' => 'updates', 'label' => 'UPDATES'],
