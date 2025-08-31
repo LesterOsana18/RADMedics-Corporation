@@ -13,7 +13,7 @@
 <div class="font-poppins pt-24 sm:pt-32 px-4 sm:px-6 lg:px-8">
     <div class="max-w-screen-2xl mx-auto space-y-52 sm:space-y-48">
 
-        <section class="text-center space-y-12">
+        <section class="scroll-ani text-center space-y-12 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase tracking-wide text-[#0ABAB5]">
                 ABOUT US
             </h1>
@@ -25,7 +25,7 @@
             </div>
         </section>
 
-        <section class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24">
+        <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
             <div class="w-full lg:w-1/2">
                 <x-layouts.image-box variant="ver-2" :image="$portraitImage"/>
             </div>
@@ -39,7 +39,7 @@
             </div>
         </section>
 
-        <section class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 xl:gap-24">
+        <section class="scroll-ani flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
             <div class="w-full lg:w-2/5">
                 <x-layouts.image-box variant="ver-3" :image="$portraitImage"/>
             </div>
@@ -53,7 +53,7 @@
             </div>
         </section>
 
-        <section class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24">
+        <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
             <div class="w-full lg:w-2/5">
                 <x-layouts.image-box variant="ver-4" :image="$portraitImage"/>
             </div>
@@ -67,7 +67,7 @@
             </div>
         </section>
 
-        <section class="text-center space-y-16">
+        <section class="scroll-ani text-center space-y-16 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
             <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5]">
             OUR CORE VALUES
             </h2>
@@ -83,7 +83,7 @@
 
     </div>
 
-    <section class="text-center space-y-16 pt-32 sm:pt-48 pb-24 sm:pb-32">
+    <section class="scroll-ani text-center space-y-16 pt-32 sm:pt-48 pb-24 sm:pb-32 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5]">
                 MEET THE TEAM
@@ -95,5 +95,39 @@
     </section>
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all elements with the .scroll-section class
+        const sections = document.querySelectorAll('.scroll-ani');
+
+        // Configure the Intersection Observer
+        const observerOptions = {
+            root: null, // Observe intersections relative to the viewport
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
+
+        // Create a new observer
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // If the element is intersecting (in view)
+                if (entry.isIntersecting) {
+                    // Apply the animation by changing classes
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+
+                    // Stop observing the element so the animation only happens once
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Attach the observer to each section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
 
 </x-layout>
