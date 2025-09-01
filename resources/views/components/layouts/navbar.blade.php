@@ -1,4 +1,8 @@
-<nav id="site-nav" class="bg-white shadow-lg fixed w-full z-20 font-sans">
+@props(['variant' => 'solid'])
+@php
+    $isTransparent = $variant === 'transparent';
+@endphp
+<nav id="site-nav" class="{{ $isTransparent ? 'bg-transparent shadow-none' : 'bg-white shadow-lg' }} fixed w-full z-20 font-sans transition-colors duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between h-24">
         <!-- Logo + Company Name + Tagline -->
         <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-6 lg:justify-start lg:w-auto">
@@ -38,7 +42,7 @@
                     <span class="absolute left-0 -bottom-1 h-[2px] bg-dark-teal transition-all duration-300 origin-left {{ $isActive ? 'w-full scale-x-100' : 'w-0 scale-x-0 group-hover:w-full group-hover:scale-x-100' }}"></span>
                 </a>
             @endforeach
-            <a href="{{ route('login') }}" class="bg-dark-teal rounded-lg px-6 py-2 font-semibold text-base text-white flex items-center transform transition-all duration-200 hover:bg-cyan hover:scale-105">
+            <a href="{{ route('login') }}" class="bg-dark-teal hover:bg-cyan rounded-lg px-6 py-2 font-semibold text-base text-white flex items-center transform transition-all duration-200 hover:scale-105">
                 LOGIN
             </a>
         </div>

@@ -1,3 +1,4 @@
+@props(['navbarVariant' => 'solid'])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -28,12 +29,13 @@
             }
         }
     </script>
-    {{-- Alpine is being used on the image-slider component --}}
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body class="bg-white flex flex-col min-h-screen">
-    @include('components.layouts.navbar')
-    <main class="flex-1">{{ $slot }}</main>
+    <x-layouts.navbar :variant="$navbarVariant" />
+    <main class="flex-1 {{ $navbarVariant === 'solid' ? 'pt-24' : '' }}">
+        {{ $slot }}
+    </main>
     @include('components.layouts.footer')
 </body>
 </html>
