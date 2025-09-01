@@ -33,7 +33,7 @@
 </head>
 <body class="bg-white flex flex-col min-h-screen">
     <x-layouts.navbar :variant="$navbarVariant" />
-    <main class="flex-1 {{ $navbarVariant === 'solid' ? 'pt-24' : '' }}">
+    <main class="flex-1">
         {{ $slot }}
     </main>
     @include('components.layouts.footer')
