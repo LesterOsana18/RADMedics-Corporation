@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout navbarVariant="transparent">
     <div class="pt-32 pb-6 md:pt-44 md:pb-32 text-center">
         <span class="bg-dark-teal text-white text-2xl px-12 py-2 rounded-full font-bold">
             RADMedics Corporation
