@@ -1,6 +1,7 @@
 <x-layout>
     <div class="max-w-3xl mx-auto pt-32 pb-8 md:pt-32 md:pb-8">
-        <div class="rounded-[32px] shadow-lg overflow-hidden bg-white">
+        <div id="transition-card"
+            class="rounded-[32px] shadow-lg overflow-hidden bg-white opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <!-- Card Header -->
             <div class="bg-cyan px-8 py-6">
                 <h2 class="text-white font-bold text-2xl mb-1">HOW CAN WE HELP?</h2>
@@ -73,4 +74,14 @@
             </form>
         </div>
     </div>
+    <!-- Animation Script -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const card = document.getElementById('transition-card');
+                card.classList.remove('opacity-0', 'translate-y-8');
+                card.classList.add('opacity-100', 'translate-y-0');
+            }, 50);
+        });
+    </script>
 </x-layout>
