@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="relative min-h-screen bg-white pt-10">
+    <div class="relative min-h-screen bg-white pt-10 overflow-x-hidden">
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute -top-24 -left-24 w-[32rem] h-[32rem] rounded-full bg-[#056360]/5 blur-3xl"></div>
-            <div class="absolute top-1/2 -right-40 w-[38rem] h-[38rem] rounded-full bg-[#056360]/5 blur-3xl"></div>
+            <div class="absolute top-1/2 right-0 translate-x-1/4 w-[38rem] h-[38rem] rounded-full bg-[#056360]/5 blur-3xl pointer-events-none"></div>
         </div>
 
         <!-- Header -->
@@ -358,6 +358,7 @@
     </div>
 
     <script>
+        window.addEventListener('load', () => { if (window.scrollX !== 0) window.scrollTo({ left: 0 }); });
         document.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section[id]');
             let activeId = '';
