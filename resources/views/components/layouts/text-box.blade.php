@@ -29,7 +29,7 @@
 
 <div class="{{ $variantClasses[$variant] ?? $variantClasses['ver-1'] }} px-4 py-8">
     @if ($variant === 'ver-1')
-        <div class="relative w-full max-w-5xl p-2 min-h-[360px] lg:h-[260px] flex items-center justify-center">
+        <div class="relative w-full max-w-5xl p-2 min-h-[580px] sm:min-h-[420px] lg:min-h-[320px] flex items-center justify-center">
             <div class="absolute inset-x-0 bottom-2 h-full rounded-3xl lg:rounded-[60px] border-4" style="border-color: #0ABAB5;"></div>
             <div class="absolute inset-x-0 top-2 h-full flex items-center justify-center rounded-3xl lg:rounded-[60px] border-4 p-6 md:p-10" style="border-color: #056360;">
                 <div class="font-poppins text-center font-light text-xl md:text-2xl leading-8" style="color: #056360;">
@@ -46,8 +46,8 @@
                 ? 'color: #FFF;'
                 : 'color: #056360;';
         @endphp
-        <div class="relative w-full max-w-sm lg:w-[345px] lg:h-[305px]">
-            <div class="flex items-center justify-center rounded-3xl lg:rounded-[60px] p-8 md:p-10 min-h-[250px] w-full h-full @if($variant === 'ver-5') border-4 @endif" style="{{ $boxStyle }}">
+        <div class="relative w-full max-w-sm lg:w-[345px]">
+            <div class="flex items-center justify-center rounded-3xl lg:rounded-[60px] p-8 md:p-10 min-h-[250px] lg:min-h-[305px] w-full h-full @if($variant === 'ver-5') border-4 @endif" style="{{ $boxStyle }}">
                 <div class="font-poppins text-center font-light text-xl md:text-2xl leading-8" style="{{ $textStyle }}">
                     {{ $slot }}
                 </div>
@@ -65,7 +65,7 @@
                 'ver-3' => 'absolute bottom-2 right-2 w-full h-full',
             ][$variant];
         @endphp
-        <div class="relative w-full max-w-4xl lg:w-[1042px] lg:h-[259px] min-h-[360px] p-2">
+        <div class="relative w-full max-w-4xl lg:w-[1042px] min-h-[580px] sm:min-h-[420px] lg:min-h-[320px] p-2">
             <div class="{{ $bgBoxClasses }} rounded-3xl lg:rounded-[60px] border-4" style="border-color: #0ABAB5;"></div>
             <div class="{{ $fgBoxClasses }} flex items-center justify-center rounded-3xl lg:rounded-[60px] border-4 p-6 md:p-8" style="border-color: #056360;">
                 <div class="font-poppins text-center font-light text-xl md:text-2xl leading-8" style="color: #056360;">
