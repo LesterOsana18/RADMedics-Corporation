@@ -26,6 +26,21 @@
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
     --color-accent-foreground: var(--color-white);
+
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slide-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    --animate-fade-in: fade-in 1s ease-out forwards;
+    --animate-fade-in-delay: fade-in 1.5s ease-out forwards;
+    --animate-slide-up: slide-up 1s ease-out forwards;
+    --animate-slide-up-delay: slide-up 1.5s ease-out forwards;
 }
 
 @layer theme {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RADMedics Corporation</title>
     <link rel="icon" href="/images/radmedics-logo.png" type="image/png">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Fonts: Only Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
