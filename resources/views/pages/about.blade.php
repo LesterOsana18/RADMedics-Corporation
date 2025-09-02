@@ -1,19 +1,23 @@
 <x-layout>
 @php
     $galleryImages = [
-        ['src' => 'images/gallery/image1.jpg', 'alt' => 'A forest path'],
-        ['src' => 'images/gallery/image2.jpg', 'alt' => 'A misty mountain range']
+        ['src' => 'images/about-us-1.jpg', 'alt' => ''],
+        ['src' => 'images/about-us-2.jpg', 'alt' => '']
     ];
-        $portraitImage = [
-        ['src' => 'images/gallery/image1.jpg', 'alt' => 'A forest path']
-    ];
+        $portrait_1_Image =
+        ['src' => 'images/what-we-do-1.jpg', 'alt' => 'what we do'];
+        $portrait_2_Image =
+        ['src' => 'images/our-mission-1.jpg', 'alt' => 'our mission'];
+
+        $landscape_1_Image =
+        ['src' => 'images/our-vision-1.jpg', 'alt' => 'our vision'];
 @endphp
 
 
 <div class="font-poppins pt-24 sm:pt-32 px-4 sm:px-6 lg:px-8">
     <div class="max-w-screen-2xl mx-auto space-y-52 sm:space-y-48">
 
-        <section class="scroll-ani text-center space-y-12 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
+        <section class="scroll-ani text-center space-y-12 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase tracking-wide text-[#0ABAB5]">
                 ABOUT US
             </h1>
@@ -25,9 +29,9 @@
             </div>
         </section>
 
-        <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
+        <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
             <div class="w-full lg:w-1/2">
-                <x-layouts.image-box variant="ver-2" :image="$portraitImage"/>
+                <x-layouts.image-box variant="ver-2" :image="$portrait_1_Image"/>
             </div>
             <div class="w-full lg:w-1/2 space-y-6 flex flex-col justify-center">
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center lg:text-right">
@@ -39,9 +43,9 @@
             </div>
         </section>
 
-        <section class="scroll-ani flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
+        <section class="scroll-ani flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
             <div class="w-full lg:w-2/5">
-                <x-layouts.image-box variant="ver-3" :image="$portraitImage"/>
+                <x-layouts.image-box variant="ver-3" :image="$landscape_1_Image"/>
             </div>
             <div class="w-full lg:w-3/5 space-y-6 flex flex-col justify-center">
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center lg:text-left">
@@ -53,9 +57,9 @@
             </div>
         </section>
 
-        <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
+        <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
             <div class="w-full lg:w-2/5">
-                <x-layouts.image-box variant="ver-4" :image="$portraitImage"/>
+                <x-layouts.image-box variant="ver-4" :image="$portrait_2_Image"/>
             </div>
             <div class="w-full lg:w-3/5 space-y-6 flex flex-col justify-center">
                 <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center lg:text-right">
@@ -67,7 +71,7 @@
             </div>
         </section>
 
-        <section class="scroll-ani text-center space-y-16 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
+        <section class="scroll-ani text-center space-y-16 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
             <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5]">
             OUR CORE VALUES
             </h2>
@@ -83,7 +87,7 @@
 
     </div>
 
-    <section class="scroll-ani text-center space-y-16 pt-32 sm:pt-48 pb-24 sm:pb-32 opacity-0 translate-y-4 transition-all duration-1400 ease-out">
+    <section class="scroll-ani text-center space-y-16 pt-32 sm:pt-48 pb-24 sm:pb-32 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5]">
                 MEET THE TEAM
@@ -98,32 +102,25 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // Select all elements with the .scroll-section class
+
         const sections = document.querySelectorAll('.scroll-ani');
 
-        // Configure the Intersection Observer
         const observerOptions = {
-            root: null, // Observe intersections relative to the viewport
+            root: null,
             rootMargin: '0px',
-            threshold: 0.1 // Trigger when 10% of the element is visible
+            threshold: 0.5
         };
 
-        // Create a new observer
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                // If the element is intersecting (in view)
                 if (entry.isIntersecting) {
-                    // Apply the animation by changing classes
                     entry.target.classList.remove('opacity-0', 'translate-y-4');
                     entry.target.classList.add('opacity-100', 'translate-y-0');
-
-                    // Stop observing the element so the animation only happens once
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Attach the observer to each section
         sections.forEach(section => {
             observer.observe(section);
         });

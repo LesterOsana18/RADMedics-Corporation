@@ -8,10 +8,10 @@
             'description' => 'Description'
         ],
         [
-            'image' => 'https://placehold.co/800x1000/dcfce7/16a34a?text=J.Smith',
-            'name' => 'Jane Smith',
-            'title' => 'Lead Developer',
-            'description' => 'Jane leads our development team with expertise and innovation, turning complex project requirements into elegant, functional code.'
+            'image' => '/images/Doc-Rhoderick.jpg',
+            'name' => 'Rhoderick C. Shih-Montevilla',
+            'title' => 'EMS Clinical Practice Director/Co-owner',
+            'description' => 'Description'
         ],
         [
             'image' => 'https://placehold.co/800x1000/fef9c3/f59e0b?text=S.Lee',

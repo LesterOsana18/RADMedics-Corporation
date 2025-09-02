@@ -47,7 +47,7 @@
             // After that, pass that single image array to the component using the :image prop
 
             <x-layouts.image-box variant="ver-3" :image="$portraitImage" />
- --}}
+            --}}
 
 
 
@@ -63,8 +63,8 @@
                 {{-- Foreground Box with Image --}}
                 <div class="absolute top-2 w-full h-full flex items-center justify-center text-gray-500 text-sm bg-white border border-[#056360]">
                     <img src="{{ $image['src'] ?? 'https://placehold.co/1280x720/e2e8f0/475569?text=Placeholder' }}"
-                         alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
-                         class="w-full h-full object-cover">
+                        alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
+                        class="w-full h-full object-cover">
                 </div>
             </div>
         @endforeach
@@ -94,8 +94,8 @@
             {{-- Foreground Box with Image --}}
             <div class="{{ $fgBoxClasses }} flex items-center justify-center text-gray-500 text-sm bg-white border border-[#056360]">
             <img src="{{ $image['src'] ?? 'https://placehold.co/800x1000/e2e8f0/475569?text=Placeholder' }}"
-                 alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
-                 class="w-full h-full object-cover">
+                alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
+                class="w-full h-full object-cover">
             </div>
         </div>
     @endif
