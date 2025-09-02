@@ -2,7 +2,7 @@
     $variantClasses = [
         'ver-1' => 'flex flex-wrap justify-center gap-8',
         'ver-2' => 'flex items-center justify-center w-full',
-        'ver-3' => 'flex items-center justify-center w-full flex-row-reverse',
+        'ver-3' => 'flex items-center justify-center w-full',
         'ver-4' => 'flex items-center justify-center w-full',
     ];
     $boxSizeClass = 'w-[97%] h-[97%]';
@@ -47,58 +47,55 @@
             // After that, pass that single image array to the component using the :image prop
 
             <x-layouts.image-box variant="ver-3" :image="$portraitImage" />
- --}}
+            --}}
 
 
 
 @php
     $variant = $variant ?? 'ver-1';
 @endphp
-<div class="{{ $variantClasses[$variant] ?? $variantClasses['ver-1'] }}">
+<div class="{{ $variantClasses[$variant] ?? $variantClasses['ver-1'] }} px-4">
     @if($variant === 'ver-1') {{-- Two Center Photobox --}}
-
         @foreach($images ?? [] as $image)
-            <div class="relative w-full md:w-1/2 max-w-lg aspect-video" style="margin-bottom: 30px; margin-left: 5%; padding-right: 5%;">
-                {{-- Background Box --}}
-                <div class="absolute top-0 right-0 {{ $centerBoxSizeClass }}" style="background-color: #0ABAB5;"></div>
-
+            <div class="relative w-full md:w-1/2 max-w-lg aspect-video">
+                {{-- Background Box (Offset) --}}
+                <div class="absolute bottom-2 w-full h-full" style="background-color: #0ABAB5;"></div>
                 {{-- Foreground Box with Image --}}
-                <div class="absolute bottom-0 right-0 {{ $centerBoxSizeClass }} flex items-center justify-center text-gray-500 text-sm" style="background-color: #FFF; border: 0.36px solid #056360;">
-                    <img src="{{ $image['src'] ?? '' }}"
-                         alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
-                         class="w-full h-full object-cover">
+                <div class="absolute top-2 w-full h-full flex items-center justify-center text-gray-500 text-sm bg-white border border-[#056360]">
+                    <img src="{{ $image['src'] ?? 'https://placehold.co/1280x720/e2e8f0/475569?text=Placeholder' }}"
+                        alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
+                        class="w-full h-full object-cover">
                 </div>
             </div>
         @endforeach
     @else
         @php
             $containerClasses = [
-                'ver-2' => 'relative w-full max-w-3xl aspect-video',
-                'ver-3' => 'relative w-full max-w-lg aspect-[4/5]',
-                'ver-4' => 'relative w-full max-w-md aspect-[4/5]',
-            ][$variant] ?? '';
-
-            $bgBoxClasses = [
-                'ver-2' => 'absolute top-0 left-0',
-                'ver-3' => 'absolute top-0 right-0',
-                'ver-4' => 'absolute top-0 left-0',
+                'ver-2' => 'relative w-full md:max-w-3xl aspect-video',
+                'ver-3' => 'relative w-full md:max-w-lg aspect-[4/5]',
+                'ver-4' => 'relative w-full md:max-w-md aspect-[4/5]',
             ][$variant] ?? '';
 
             $fgBoxClasses = [
-                'ver-2' => 'absolute bottom-0 right-0',
-                'ver-3' => 'absolute bottom-0 left-0',
-                'ver-4' => 'absolute bottom-0 right-0',
+                'ver-2' => 'absolute top-2 md:left-2 w-full h-full',
+                'ver-3' => 'absolute top-2 md:right-2 w-full h-full',
+                'ver-4' => 'absolute top-2 md:left-2 w-full h-full',
+            ][$variant] ?? '';
+
+            $bgBoxClasses = [
+                'ver-2' => 'absolute bottom-2 md:right-2 w-full h-full',
+                'ver-3' => 'absolute bottom-2 md:left-2 w-full h-full',
+                'ver-4' => 'absolute bottom-2 md:right-2 w-full h-full',
             ][$variant] ?? '';
         @endphp
-        <div class="{{ $containerClasses }}" style="margin-bottom: 30px">
+        <div class="{{ $containerClasses }}">
             {{-- Background Box --}}
-            <div class="{{ $bgBoxClasses }} {{ $boxSizeClass }}" style="background-color: #0ABAB5;"></div>
-
+            <div class="{{ $bgBoxClasses }}" style="background-color: #0ABAB5;"></div>
             {{-- Foreground Box with Image --}}
-            <div class="{{ $fgBoxClasses }} {{ $boxSizeClass }} flex items-center justify-center text-gray-500 text-sm" style="background-color: #FFF; border: 0.36px solid #056360;">
-                <img src="{{ $image['src'] ?? '' }}"
-                     alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
-                     class="w-full h-full object-cover">
+            <div class="{{ $fgBoxClasses }} flex items-center justify-center text-gray-500 text-sm bg-white border border-[#056360]">
+            <img src="{{ $image['src'] ?? 'https://placehold.co/800x1000/e2e8f0/475569?text=Placeholder' }}"
+                alt="{{ $image['alt'] ?? 'Placeholder Image' }}"
+                class="w-full h-full object-cover">
             </div>
         </div>
     @endif
