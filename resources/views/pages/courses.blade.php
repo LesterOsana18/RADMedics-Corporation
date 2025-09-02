@@ -38,7 +38,7 @@
                 />
             </div>
 
-            {{-- Animation for Cards (same pattern as updates page) --}}
+            {{-- Animation for Cards --}}
             <script>
                 window.addEventListener('DOMContentLoaded', () => {
                     const cards = document.querySelectorAll('.js-course-card');

@@ -49,7 +49,7 @@
     <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
         {{ $description }}
     </p>
-    <!-- Bottom row: button (left) + modality bullet (right) -->
+    {{-- Button and Mode Label --}}
     <div class="mt-auto flex items-center justify-between">
         <x-layouts.button
             type="outline"
