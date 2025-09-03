@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="max-w-3xl mx-auto pt-32 pb-8 md:pt-32 md:pb-8">
+    <div class="max-w-3xl mx-auto pt-32 pb-8 md:pt-0 md:pb-0 md:mt-[var(--nav-height)] md:min-h-[calc(100vh-var(--nav-height))] md:flex md:items-center md:justify-center">
         <div id="transition-card"
             class="rounded-[32px] shadow-lg overflow-hidden bg-white opacity-0 translate-y-8 transition-all duration-500 ease-out">
             <!-- Card Header -->
