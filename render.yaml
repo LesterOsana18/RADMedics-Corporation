@@ -1,7 +1,19 @@
 services:
   - type: web
-    name: laravel-app
+    name: radmedics-laravel
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
     autoDeploy: true
+    healthCheckPath: /healthz
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: RUN_MIGRATIONS
+        value: "true"
+      - key: APP_KEY
+        sync: false
+      - key: DB_CONNECTION
+        value: sqlite

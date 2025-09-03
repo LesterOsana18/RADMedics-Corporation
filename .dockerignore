@@ -1,0 +1,17 @@
+# Exclude local dependencies and build artifacts
+node_modules
+vendor
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+public/build
+public/hot
+.DS_Store
+.git
+.gitignore
+.env
+.idea
+.vscode
+npm-debug.log
+yarn-error.log
