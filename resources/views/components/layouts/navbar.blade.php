@@ -30,7 +30,7 @@
         </div>
 
         <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center space-x-5 -mx-20">
+    <div class="hidden lg:flex items-center space-x-6 -mx-20">
             @php($navItems = [
                 ['route' => 'landing-page', 'label' => 'HOME'],
                 ['route' => 'about', 'label' => 'ABOUT US'],
@@ -70,13 +70,13 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-dark-teal bg-opacity-95 transform -translate-x-full
-               transition-transform duration-300 ease-in-out lg:hidden z-50">
+            transition-transform duration-300 ease-in-out lg:hidden z-50">
         <button id="menu-close" aria-label="Close menu"
             class="absolute top-4 right-4 focus:outline-none">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
-                 viewBox="0 0 24 24">
+                viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
         <div class="mt-20 px-6 space-y-6">
