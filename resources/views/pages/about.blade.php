@@ -34,7 +34,7 @@
                 <x-layouts.image-box variant="ver-2" :image="$portrait_1_Image"/>
             </div>
             <div class="w-full lg:w-1/2 space-y-6 flex flex-col justify-center">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center lg:text-right">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center">
                     WHAT WE DO
                 </h2>
                 <x-layouts.text-box variant="ver-2">
@@ -48,7 +48,7 @@
                 <x-layouts.image-box variant="ver-3" :image="$landscape_1_Image"/>
             </div>
             <div class="w-full lg:w-3/5 space-y-6 flex flex-col justify-center">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center lg:text-left">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center">
                     OUR MISSION
                 </h2>
                 <x-layouts.text-box variant="ver-3">
@@ -62,7 +62,7 @@
                 <x-layouts.image-box variant="ver-4" :image="$portrait_2_Image"/>
             </div>
             <div class="w-full lg:w-3/5 space-y-6 flex flex-col justify-center">
-                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center lg:text-right">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5] text-center">
                     OUR VISION
                 </h2>
                 <x-layouts.text-box variant="ver-2">
