@@ -3,28 +3,16 @@
     $members = [
         [
             'image' => '/images/Doc-Almar.jpg',
-            'name' => 'ALMAR NUÑEZ',
+            'name' => 'Almar Nuñez',
             'title' => 'President & Medical Director',
             'description' => 'Description'
         ],
         [
             'image' => '/images/Doc-Rhoderick.jpg',
-            'name' => 'Rhoderick C. Shih-Montevilla',
+            'name' => 'Rhoderick Shih-Montevilla',
             'title' => 'EMS Clinical Practice Director/Co-owner',
             'description' => 'Description'
         ],
-        [
-            'image' => 'https://placehold.co/800x1000/fef9c3/f59e0b?text=S.Lee',
-            'name' => 'Sam Lee',
-            'title' => 'UX/UI Designer',
-            'description' => 'Sam is the creative force behind our user-centric designs, crafting intuitive and beautiful interfaces that delight our users.'
-        ],
-        [
-            'image' => 'https://placehold.co/800x1000/fee2e2/dc2626?text=A.Wang',
-            'name' => 'Alex Wang',
-            'title' => 'Project Manager',
-            'description' => 'Alex masterfully steers our projects from conception to completion, ensuring we meet deadlines and exceed expectations.'
-        ]
     ];
 @endphp
 

@@ -14,10 +14,10 @@
 @endphp
 
 
-<div class="font-poppins pt-24 sm:pt-32 px-4 sm:px-6 lg:px-8">
+<div class="font-poppins pt-32 sm:pt-32 px-4 sm:px-6 lg:px-8">
     <div class="max-w-screen-2xl mx-auto space-y-52 sm:space-y-48">
 
-        <section class="scroll-ani text-center space-y-12 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
+    <section class="scroll-ani text-center space-y-12 opacity-0 translate-y-4 transition-all duration-[500ms] ease-in-out">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase tracking-wide text-[#0ABAB5]">
                 ABOUT US
             </h1>
@@ -29,7 +29,7 @@
             </div>
         </section>
 
-        <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
+    <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-[500ms] ease-in-out">
             <div class="w-full lg:w-1/2">
                 <x-layouts.image-box variant="ver-2" :image="$portrait_1_Image"/>
             </div>
@@ -43,7 +43,7 @@
             </div>
         </section>
 
-        <section class="scroll-ani flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
+    <section class="scroll-ani flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-[500ms] ease-in-out">
             <div class="w-full lg:w-2/5">
                 <x-layouts.image-box variant="ver-3" :image="$landscape_1_Image"/>
             </div>
@@ -57,7 +57,7 @@
             </div>
         </section>
 
-        <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
+    <section class="scroll-ani flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-24 opacity-0 translate-y-4 transition-all duration-[500ms] ease-in-out">
             <div class="w-full lg:w-2/5">
                 <x-layouts.image-box variant="ver-4" :image="$portrait_2_Image"/>
             </div>
@@ -71,7 +71,7 @@
             </div>
         </section>
 
-        <section class="scroll-ani text-center space-y-16 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
+    <section class="scroll-ani text-center space-y-16 opacity-0 translate-y-4 transition-all duration-[500ms] ease-in-out">
             <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5]">
             OUR CORE VALUES
             </h2>
@@ -87,7 +87,7 @@
 
     </div>
 
-    <section class="scroll-ani text-center space-y-16 pt-32 sm:pt-48 pb-24 sm:pb-32 opacity-0 translate-y-4 transition-all duration-5000 ease-out">
+    <section class="scroll-ani text-center space-y-16 pt-32 sm:pt-48 pb-24 sm:pb-32 opacity-0 translate-y-4 transition-all duration-[500ms] ease-in-out">
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5]">
                 MEET THE TEAM
