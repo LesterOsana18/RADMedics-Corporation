@@ -5,30 +5,32 @@ FROM php:8.2-fpm
 RUN apt-get update && apt-get install -y \
     git \
     curl \
+    unzip \
+    zip \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
-    zip \
-    unzip \
+    nodejs \
+    npm \
     nginx \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 # Set working directory
 WORKDIR /var/www
 
-# Copy composer
+# Copy composer from official image
 COPY --from=composer:2.5 /usr/bin/composer /usr/bin/composer
 
 # Copy project files
 COPY . .
 
-# Install dependencies
+# Install PHP dependencies first (so vendor/ exists before Vite runs)
 RUN composer install --no-dev --optimize-autoloader
 
-# Build frontend
-RUN npm install && npm run build || true
+# Build frontend assets AFTER composer install
+RUN npm install && npm run build
 
-# Set permissions
+# Set permissions for Laravel
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Copy default nginx config
