@@ -89,7 +89,7 @@
 
     <section class="scroll-ani text-center space-y-16 pt-32 sm:pt-48 pb-24 sm:pb-32 opacity-0 translate-y-4 transition-all duration-[500ms] ease-in-out">
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-             <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5]">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-[#0ABAB5]">
                 MEET THE TEAM
             </h2>
         </div>
