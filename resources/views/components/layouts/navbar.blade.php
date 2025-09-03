@@ -11,9 +11,9 @@
 <nav id="site-nav" class="{{ $navWrapperClasses }} fixed w-full z-20 font-sans transition-colors duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between h-24">
         <!-- Logo + Company Name + Tagline -->
-        <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-6 lg:justify-start lg:w-auto">
+        <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-4 lg:justify-start lg:w-auto">
             <!-- Logo -->
-            <a href="{{ url('/') }}" class="group flex items-center justify-center w-full space-x-2 lg:space-x-6 lg:justify-start lg:w-auto">
+            <a href="{{ url('/') }}" class="group flex items-center justify-center w-full space-x-2 lg:space-x-4 lg:justify-start lg:w-auto">
                 <img src="/images/radmedics-logo.png"
                     alt="RADMedics Logo"
                     class="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full shadow"/>
