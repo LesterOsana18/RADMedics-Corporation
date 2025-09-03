@@ -5,13 +5,13 @@
             'image' => '/images/Doc-Almar.jpg',
             'name' => 'Almar Nuñez',
             'title' => 'President & Medical Director',
-            'description' => 'Description'
+            'description' => 'As the President and Medical Director, Almar Nuñez oversees the strategic direction of the organization while ensuring the highest medical standards are upheld. He combines leadership and medical expertise to guide the team in delivering safe, effective, and innovative emergency care.'
         ],
         [
             'image' => '/images/Doc-Rhoderick.jpg',
             'name' => 'Rhoderick Shih-Montevilla',
             'title' => 'EMS Clinical Practice Director/Co-owner',
-            'description' => 'Description'
+            'description' => 'As the EMS Clinical Practice Director and Co-owner, Rhoderick Shih-Montevilla provides leadership in clinical standards, training, and overall direction of emergency medical services operations within the organization.'
         ],
     ];
 @endphp
