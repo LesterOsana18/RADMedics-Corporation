@@ -1,7 +1,7 @@
 <x-layout>
     <div class="max-w-3xl mx-auto pt-32 pb-8 md:pt-0 md:pb-0 md:mt-[var(--nav-height)] md:min-h-[calc(100vh-var(--nav-height))] md:flex md:items-center md:justify-center">
         <div id="transition-card"
-            class="rounded-[32px] shadow-lg overflow-hidden bg-white opacity-0 translate-y-8 transition-all duration-500 ease-out">
+            class="rounded-[32px] shadow-lg overflow-hidden bg-white opacity-0 translate-y-8 transition-all duration-500 ease-out w-full md:my-8">
             <!-- Card Header -->
             <div class="bg-cyan px-8 py-6">
                 <h2 class="text-white font-bold text-2xl mb-1">HOW CAN WE HELP?</h2>
