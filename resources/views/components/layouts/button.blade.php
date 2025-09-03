@@ -14,7 +14,7 @@
 ])
 
 @php
-	$base = 'font-semibold transition-colors duration-200 relative overflow-hidden group';
+	$base = 'font-semibold transition-colors duration-200 relative overflow-hidden group inline-flex items-center justify-center';
 
 	// Font Size
 	$sizeClasses = [
@@ -90,24 +90,24 @@
 @if($type === 'outline' || $type === 'outline-round')
 	@if($href)
 		<a href="{{ $href }}" class="{{ $btnClass }}">
-			<span class="absolute left-0 top-0 h-full w-0 transition-all duration-300 group-hover:w-full z-0 {{ $c['main'] }}"></span>
+			<span class="absolute left-0 top-0 h-full w-0 transition-all duration-300 group-hover:w-full z-0 pointer-events-none {{ $c['main'] }}"></span>
 			<span class="relative z-10 font-semibold transition-colors duration-300 group-hover:text-white">{{ $text }}</span>
 		</a>
 	@else
 		<button type="button" class="{{ $btnClass }}">
-			<span class="absolute left-0 top-0 h-full w-0 transition-all duration-300 group-hover:w-full z-0 {{ $c['main'] }}"></span>
+			<span class="absolute left-0 top-0 h-full w-0 transition-all duration-300 group-hover:w-full z-0 pointer-events-none {{ $c['main'] }}"></span>
 			<span class="relative z-10 font-semibold transition-colors duration-300 group-hover:text-white">{{ $text }}</span>
 		</button>
 	@endif
 @elseif($type === 'solid')
 	@if($href)
 		<a href="{{ $href }}" class="{{ $btnClass }}">
-			<span class="absolute right-0 top-0 h-full w-full transition-all duration-300 group-hover:w-0 z-0 {{ $c['main'] }}"></span>
+			<span class="absolute right-0 top-0 h-full w-full transition-all duration-300 group-hover:w-0 z-0 pointer-events-none {{ $c['main'] }}"></span>
 			<span class="relative z-10 font-semibold transition-colors duration-300 {{ $c['text'] }} group-hover:{{ $c['outlineText'] }}">{{ $text }}</span>
 		</a>
 	@else
 		<button type="button" class="{{ $btnClass }}">
-			<span class="absolute right-0 top-0 h-full w-full transition-all duration-300 group-hover:w-0 z-0 {{ $c['main'] }}"></span>
+			<span class="absolute right-0 top-0 h-full w-full transition-all duration-300 group-hover:w-0 z-0 pointer-events-none {{ $c['main'] }}"></span>
 			<span class="relative z-10 font-semibold transition-colors duration-300 {{ $c['text'] }} group-hover:{{ $c['outlineText'] }}">{{ $text }}</span>
 		</button>
 	@endif

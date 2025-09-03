@@ -26,7 +26,7 @@
                         </p>
                     </div>
                     <div>
-                        <x-layouts.button href="landing-page" type="outline" color="tiffany-blue" size="md" text="Back to Home" />
+                        <x-layouts.button href="landing-page" type="outline-round" color="tiffany-blue" size="md" text="Back to Home" />
                     </div>
                 </div>
             </div>
