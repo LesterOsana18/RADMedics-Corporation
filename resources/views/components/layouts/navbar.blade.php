@@ -31,18 +31,22 @@
 
         <!-- Desktop Navigation -->
     <div class="hidden lg:flex items-center gap-x-6 -mx-20">
-            @php($navItems = [
-                ['route' => 'landing-page', 'label' => 'HOME'],
-                ['route' => 'about', 'label' => 'ABOUT US'],
-                ['route' => 'courses', 'label' => 'COURSES'],
-                ['route' => 'updates', 'label' => 'UPDATES'],
-                ['route' => 'contact', 'label' => 'CONTACT'],
-            ])
+            @php
+                $navItems = [
+                    ['route' => 'landing-page', 'label' => 'HOME'],
+                    ['route' => 'about', 'label' => 'ABOUT US'],
+                    ['route' => 'courses', 'label' => 'COURSES'],
+                    ['route' => 'updates', 'label' => 'UPDATES'],
+                    ['route' => 'contact', 'label' => 'CONTACT'],
+                ];
+            @endphp
             @foreach($navItems as $item)
-                @php($exists = \Illuminate\Support\Facades\Route::has($item['route']))
-                @php($isActive = $item['route'] !== 'landing-page' && request()->routeIs($item['route']))
-                @php($url = $exists ? route($item['route']) : '#')
-                @php($colorClass = $isActive ? 'text-dark-teal' : $baseLinkColor)
+                @php
+                    $exists = \Illuminate\Support\Facades\Route::has($item['route']);
+                    $isActive = $item['route'] !== 'landing-page' && request()->routeIs($item['route']);
+                    $url = $exists ? route($item['route']) : '#';
+                    $colorClass = $isActive ? 'text-dark-teal' : $baseLinkColor;
+                @endphp
                 <a href="{{ $url }}" class="px-3 font-semibold text-base relative group flex items-center nav-link">
                     <span class="{{ $colorClass }} transition-all duration-200 group-hover:text-dark-teal group-hover:scale-105">
                         {{ $item['label'] }}
@@ -80,18 +84,22 @@
             </svg>
         </button>
         <div class="mt-20 px-6 space-y-6">
-            @php($mobileNavItems = [
-                ['route' => 'landing-page', 'label' => 'HOME'],
-                ['route' => 'about', 'label' => 'ABOUT US'],
-                ['route' => 'courses', 'label' => 'COURSES'],
-                ['route' => 'updates', 'label' => 'UPDATES'],
-                ['route' => 'contact', 'label' => 'CONTACT'],
-                ['route' => 'login', 'label' => 'LOGIN'],
-            ])
+            @php
+                $mobileNavItems = [
+                    ['route' => 'landing-page', 'label' => 'HOME'],
+                    ['route' => 'about', 'label' => 'ABOUT US'],
+                    ['route' => 'courses', 'label' => 'COURSES'],
+                    ['route' => 'updates', 'label' => 'UPDATES'],
+                    ['route' => 'contact', 'label' => 'CONTACT'],
+                    ['route' => 'login', 'label' => 'LOGIN'],
+                ];
+            @endphp
             @foreach($mobileNavItems as $item)
-                @php($exists = \Illuminate\Support\Facades\Route::has($item['route']))
-                @php($isActive = $item['route'] !== 'landing-page' && request()->routeIs($item['route']))
-                @php($url = $exists ? route($item['route']) : '#')
+                @php
+                    $exists = \Illuminate\Support\Facades\Route::has($item['route']);
+                    $isActive = $item['route'] !== 'landing-page' && request()->routeIs($item['route']);
+                    $url = $exists ? route($item['route']) : '#';
+                @endphp
                 <a href="{{ $url }}" class="block font-bold text-lg {{ $isActive ? 'text-cyan' : 'text-white' }} transition-colors duration-200 hover:text-cyan">
                     {{ $item['label'] }}
                 </a>

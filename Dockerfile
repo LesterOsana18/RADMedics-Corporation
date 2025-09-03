@@ -20,7 +20,8 @@ COPY --from=composer:2.5 /usr/bin/composer /usr/bin/composer
 
 # 1. Composer deps (cache layer)
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --prefer-dist --no-progress --no-interaction --optimize-autoloader
+# First pass: install dependencies without running Laravel's artisan-dependent composer scripts
+RUN COMPOSER_NO_DEV=1 composer install --no-dev --prefer-dist --no-progress --no-interaction --no-scripts --optimize-autoloader
 
 # 2. Node deps (cache layer)
 COPY package.json package-lock.json* ./
@@ -29,11 +30,11 @@ RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
 # 3. App source
 COPY . .
 
+# Second pass: run composer scripts now that full source (artisan, bootstrap, etc.) is present
+RUN COMPOSER_NO_DEV=1 composer install --no-dev --prefer-dist --no-progress --no-interaction --optimize-autoloader
+
 # 4. Build assets & Laravel optimize (done at build time)
-RUN npm run build \
-    && php artisan config:cache \
-    && php artisan route:cache \
-    && php artisan view:cache || true
+RUN npm run build || echo "Skipping build failure fallback"
 
 # Ensure writable dirs
 RUN chown -R www-data:www-data storage bootstrap/cache \
