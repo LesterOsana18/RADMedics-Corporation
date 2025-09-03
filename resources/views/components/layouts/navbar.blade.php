@@ -40,7 +40,7 @@
             ])
             @foreach($navItems as $item)
                 @php($exists = \Illuminate\Support\Facades\Route::has($item['route']))
-                @php($isActive = request()->routeIs($item['route']))
+                @php($isActive = $item['route'] !== 'landing-page' && request()->routeIs($item['route']))
                 @php($url = $exists ? route($item['route']) : '#')
                 @php($colorClass = $isActive ? 'text-dark-teal' : $baseLinkColor)
                 <a href="{{ $url }}" class="px-1 font-semibold text-base relative group flex items-center nav-link">
@@ -90,7 +90,7 @@
             ])
             @foreach($mobileNavItems as $item)
                 @php($exists = \Illuminate\Support\Facades\Route::has($item['route']))
-                @php($isActive = request()->routeIs($item['route']))
+                @php($isActive = $item['route'] !== 'landing-page' && request()->routeIs($item['route']))
                 @php($url = $exists ? route($item['route']) : '#')
                 <a href="{{ $url }}" class="block font-bold text-lg {{ $isActive ? 'text-cyan' : 'text-white' }} transition-colors duration-200 hover:text-cyan">
                     {{ $item['label'] }}
