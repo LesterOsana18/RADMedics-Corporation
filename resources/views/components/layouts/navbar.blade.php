@@ -8,7 +8,7 @@
     $baseLinkColor = $variant === 'transparent-white' ? 'text-white' : 'text-cyan';
 @endphp
 
-<nav id="site-nav" class="{{ $navWrapperClasses }} fixed w-full z-20 font-sans transition-colors duration-300">
+<nav id="site-nav" class="{{ $navWrapperClasses }} fixed top-0 w-full z-20 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between h-24">
         <!-- Logo + Company Name + Tagline -->
         <div class="flex items-center justify-center w-full space-x-2 lg:-mx-20 lg:space-x-4 lg:justify-start lg:w-auto">

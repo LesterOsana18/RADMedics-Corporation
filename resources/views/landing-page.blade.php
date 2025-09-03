@@ -1,8 +1,5 @@
 <x-layout navbarVariant="transparent-white">
     <div class="relative overflow-hidden min-h-screen w-full flex items-center justify-center">
-        <!-- <video autoplay muted loop class="absolute inset-0 object-cover z-0">
-            <source src="/images/v4.mp4" type="video/mp4" >
-        </video> -->
     <img src="/images/landing-page-bg.jpg" alt="Landing Page Background" class="absolute object-cover inset-0 w-full h-full min-h-screen"/>
 
     <div class="absolute inset-0 w-full h-full min-h-screen bg-black/40 backdrop-blur-[9px] z-10"></div>
@@ -30,5 +27,25 @@
             </div>
         </div>
     </div>
+    <!-- Hide Navbar on Scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('site-nav');
+
+            function onScroll() {
+                if (window.scrollY === 0) {
+                    // At the very top, show navbar
+                    navbar.classList.remove('opacity-0', '-translate-y-full', 'pointer-events-none');
+                } else {
+                    // Hide navbar when not at top
+                    navbar.classList.add('opacity-0', '-translate-y-full', 'pointer-events-none');
+                }
+            }
+
+            window.addEventListener('scroll', onScroll);
+            // Run once on page load
+            onScroll();
+        });
+    </script>
 </x-layout>
 
