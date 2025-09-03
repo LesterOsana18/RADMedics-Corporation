@@ -1,44 +1,57 @@
-# Use PHP 8 with FPM
 FROM php:8.2-fpm
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    git \
-    curl \
-    unzip \
-    zip \
-    libpng-dev \
-    libonig-dev \
-    libxml2-dev \
-    nodejs \
-    npm \
-    nginx \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+LABEL org.opencontainers.image.source="https://github.com/your-org/your-repo" \
+      maintainer="You <you@example.com>"
 
-# Set working directory
+# Install system dependencies (Node from Debian is OK for build-only use) & PHP extensions
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git curl unzip zip \
+    libpng-dev libonig-dev libxml2-dev \
+    libjpeg-dev libfreetype6-dev libwebp-dev \
+    nodejs npm nginx \
+    && docker-php-ext-configure gd --with-jpeg --with-freetype --with-webp \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /var/www
 
-# Copy composer from official composer image
+# Copy composer early for caching
 COPY --from=composer:2.5 /usr/bin/composer /usr/bin/composer
 
-# Copy project files
+# 1. Composer deps (cache layer)
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --prefer-dist --no-progress --no-interaction --optimize-autoloader
+
+# 2. Node deps (cache layer)
+COPY package.json package-lock.json* ./
+RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+# 3. App source
 COPY . .
 
-# Install PHP dependencies (so vendor/ exists before frontend build)
-RUN composer install --no-dev --optimize-autoloader
+# 4. Build assets & Laravel optimize (done at build time)
+RUN npm run build \
+    && php artisan config:cache \
+    && php artisan route:cache \
+    && php artisan view:cache || true
 
-# Build frontend assets after composer install
-RUN npm install && npm run build
-
-# Set permissions for Laravel storage & cache
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+# Ensure writable dirs
+RUN chown -R www-data:www-data storage bootstrap/cache \
+    && find storage -type d -exec chmod 775 {} \; \
+    && chmod 775 bootstrap/cache
 
 # Copy Nginx config
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose port 80 for web traffic
-EXPOSE 80
+# Copy entrypoint
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-# Start Nginx + PHP-FPM
-CMD ["sh", "-c", "nginx && php-fpm -F"]
+ENV PORT=8080
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 CMD curl -f http://localhost:${PORT}/ || exit 1
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+CMD ["app"]
 
