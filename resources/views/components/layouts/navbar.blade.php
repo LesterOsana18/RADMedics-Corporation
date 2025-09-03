@@ -30,7 +30,7 @@
         </div>
 
         <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center space-x-5 -mx-20">
+    <div class="hidden lg:flex items-center gap-x-6 -mx-20">
             @php($navItems = [
                 ['route' => 'landing-page', 'label' => 'HOME'],
                 ['route' => 'about', 'label' => 'ABOUT US'],
