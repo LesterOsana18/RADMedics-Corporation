@@ -1,6 +1,7 @@
 {{--
     Sample Usage:
-    <x-layouts.button type="outline" color="tiffany-blue" size="sm" text="Submit" />
+	<x-layouts.button type="outline" color="tiffany-blue" size="sm" text="Submit" />
+	<x-layouts.button type="outline-round" color="tiffany-blue" size="sm" text="Submit" />
 --}}
 
 @props([
@@ -13,7 +14,7 @@
 ])
 
 @php
-	$base = 'rounded-lg font-semibold transition-colors duration-200 relative overflow-hidden group';
+	$base = 'font-semibold transition-colors duration-200 relative overflow-hidden group';
 
 	// Font Size
 	$sizeClasses = [
@@ -21,6 +22,9 @@
 		'md' => 'px-4 py-2 text-base',
 		'lg' => 'px-6 py-3 text-lg',
 	];
+
+	// Border Radius for outline-round
+	$roundClass = 'rounded-full';
 
     // Color and Type Definitions
 	$sizeClass = $sizeClasses[$size] ?? $sizeClasses['md'];
@@ -73,8 +77,9 @@
 	];
 
 	$types = [
-		'solid' => fn($c) => "$sizeClass $base border {$c['border']} {$c['text']} bg-transparent",
-		'outline' => fn($c) => "$sizeClass $base border {$c['border']} {$c['outlineText']} bg-transparent",
+		'solid' => fn($c) => "$sizeClass $base rounded-lg border {$c['border']} {$c['text']} bg-transparent",
+		'outline' => fn($c) => "$sizeClass $base rounded-lg border {$c['border']} {$c['outlineText']} bg-transparent",
+		'outline-round' => fn($c) => "$sizeClass $base $roundClass border {$c['border']} {$c['outlineText']} bg-transparent",
 	];
 
 	$c = $colors[$color] ?? $colors['blue'];
@@ -82,7 +87,7 @@
 	$btnClass .= " $class";
 @endphp
 
-@if($type === 'outline')
+@if($type === 'outline' || $type === 'outline-round')
 	@if($href)
 		<a href="{{ $href }}" class="{{ $btnClass }}">
 			<span class="absolute left-0 top-0 h-full w-0 transition-all duration-300 group-hover:w-full z-0 {{ $c['main'] }}"></span>
