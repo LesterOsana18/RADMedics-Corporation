@@ -26,7 +26,6 @@
     class="flex flex-col items-center justify-center w-full px-4 py-10 font-poppins"
 >
     <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 w-full max-w-7xl">
-        {{-- Image Slider: Now uses a fixed width on large screens --}}
         <div class="flex flex-col items-center order-1 w-full lg:w-[400px]">
             <div class="relative w-full max-w-[400px] h-[605px] lg:max-w-none">
                 <div class="absolute top-0 left-0 w-[calc(100%-14px)] h-[calc(100%-15px)] bg-[#0ABAB5] shadow-md"></div>
