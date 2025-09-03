@@ -23,14 +23,14 @@
                     <span class="text-base sm:text-lg lg:text-xl font-bold {{ $baseLinkColor }} -mt-1 group-hover:text-dark-teal group-hover:scale-105 transition-all duration-200 origin-center inline-block">CORPORATION</span>
                 </div>
             </a>
-            <!-- Tagline Pill (unchanged) -->
+            <!-- Tagline Pill -->
             <div class="bg-dark-teal rounded-xl px-2 py-1 sm:px-3 sm:py-2 text-white italic text-xs sm:text-xs lg:text-xs font-sans w-fit text-center shadow hidden sm:block">
                 Response Advocates for Development of Medics
             </div>
         </div>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex items-center space-x-6 -mx-20">
+    <div class="hidden lg:flex items-center space-x-5 -mx-20">
             @php($navItems = [
                 ['route' => 'landing-page', 'label' => 'HOME'],
                 ['route' => 'about', 'label' => 'ABOUT US'],
@@ -43,7 +43,7 @@
                 @php($isActive = $item['route'] !== 'landing-page' && request()->routeIs($item['route']))
                 @php($url = $exists ? route($item['route']) : '#')
                 @php($colorClass = $isActive ? 'text-dark-teal' : $baseLinkColor)
-                <a href="{{ $url }}" class="px-1 font-semibold text-base relative group flex items-center nav-link">
+                <a href="{{ $url }}" class="px-3 font-semibold text-base relative group flex items-center nav-link">
                     <span class="{{ $colorClass }} transition-all duration-200 group-hover:text-dark-teal group-hover:scale-105">
                         {{ $item['label'] }}
                     </span>
@@ -67,7 +67,7 @@
         </button>
     </div>
 
-    <!-- Mobile Menu (unchanged) -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-dark-teal bg-opacity-95 transform -translate-x-full
                transition-transform duration-300 ease-in-out lg:hidden z-50">
